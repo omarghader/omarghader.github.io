@@ -6,8 +6,8 @@ categories:
 excerpt: "This post will resume the subjects of my next posts"
 tags: [Android,Java,Android development,DevOps,Ansible,provisionning,vagrant]
 image:
-  feature:
-  thumb: 3953273590_704e3899d5_m.jpg
+  feature: sample-image-1.jpg
+  thumb: 
 date: 2015-08-22T21:08:08+02:00
 ---
 Hi, This is my first post.
