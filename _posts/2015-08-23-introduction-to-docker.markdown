@@ -3,6 +3,7 @@ layout: post
 title: Introduction to Docker
 modified:
 categories: 
+comments: true
 excerpt: Docker is a new open-source project that makes deployment of applications easier.
 tags: [docker,devops,golang,apache-server,docker tutorial]
 image:
