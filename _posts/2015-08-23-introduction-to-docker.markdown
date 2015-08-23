@@ -14,7 +14,7 @@ Docker is a new open-source project that makes deployment of applications easier
 Docker is using 2 terms : image and container:
 
 * An image is a packaged application that is not running.
-* A container is an instance of image. It's a running application.
+* A container is an instance of image. It can be a running or stopped application.
 
 In addition, Docker have a lot of advantages. let's discover them! 
 
