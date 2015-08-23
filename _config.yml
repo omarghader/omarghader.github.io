@@ -2,8 +2,8 @@
 
 title:            OmarG's Blog
 locale:           en_US
-url: omarghader.github.io
-
+url:
+baseurl: omarghader.github.io
 
 # Jekyll configuration
 
