@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">OmarG's Blog</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2015-08-23T16:43:50+02:00</updated>
-<id>http://localhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://omarghader.github.io/feed.xml" />
+<link rel="alternate" type="text/html" href="http://omarghader.github.io" />
+<updated>2015-08-23T16:52:02+02:00</updated>
+<id>http://omarghader.github.io/</id>
 <author>
   <name>Omar Ghader</name>
-  <uri>http://localhost:4000/</uri>
+  <uri>http://omarghader.github.io/</uri>
   <email>ghader@etud.insa-toulouse.fr</email>
 </author>
 
@@ -17,13 +17,13 @@
 
 <entry>
   <title type="html"><![CDATA[Introduction to Docker]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/introduction-to-docker/" />
-  <id>http://localhost:4000/introduction-to-docker</id>
+  <link rel="alternate" type="text/html" href="http://omarghader.github.io/introduction-to-docker/" />
+  <id>http://omarghader.github.io/introduction-to-docker</id>
   <published>2015-08-23T15:14:25+02:00</published>
   <updated>2015-08-23T15:14:25+02:00</updated>
   <author>
     <name>Omar Ghader</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://omarghader.github.io</uri>
     <email>ghader@etud.insa-toulouse.fr</email>
   </author>
   <content type="html">
@@ -71,7 +71,7 @@ Docker is using 2 terms : image and container:&lt;/p&gt;
 
 &lt;p&gt;In my next tutorial, we will maipulate docker containers. and I will show you how we connect a PhpMyAdmin to MySQL Server, both working on different docker containers on the same host.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/introduction-to-docker/&quot;&gt;Introduction to Docker&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://localhost:4000&quot;&gt;OmarG's Blog&lt;/a&gt; on August 23, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://omarghader.github.io/introduction-to-docker/&quot;&gt;Introduction to Docker&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://omarghader.github.io&quot;&gt;OmarG's Blog&lt;/a&gt; on August 23, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -80,13 +80,13 @@ Docker is using 2 terms : image and container:&lt;/p&gt;
 
 <entry>
   <title type="html"><![CDATA[My First Post]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/my-first-post/" />
-  <id>http://localhost:4000/my-first-post</id>
+  <link rel="alternate" type="text/html" href="http://omarghader.github.io/my-first-post/" />
+  <id>http://omarghader.github.io/my-first-post</id>
   <published>2015-08-22T21:08:08+02:00</published>
   <updated>2015-08-22T21:08:08+02:00</updated>
   <author>
     <name>Omar Ghader</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://omarghader.github.io</uri>
     <email>ghader@etud.insa-toulouse.fr</email>
   </author>
   <content type="html">
@@ -108,7 +108,7 @@ DevOps’ goal is the automatization of deployment in an efficient way.
 Provisionning is a part of DevOps. Most known provisionning tools are: Puppet, SaltStack , Chef , Ansible …
 I will discuss some of these tools and the way to use it.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/my-first-post/&quot;&gt;My First Post&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://localhost:4000&quot;&gt;OmarG's Blog&lt;/a&gt; on August 22, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://omarghader.github.io/my-first-post/&quot;&gt;My First Post&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://omarghader.github.io&quot;&gt;OmarG's Blog&lt;/a&gt; on August 22, 2015.&lt;/p&gt;
   </content>
 </entry>
 

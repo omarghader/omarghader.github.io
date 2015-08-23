@@ -2,8 +2,12 @@
 
 title:            OmarG's Blog
 locale:           en_US
-url: http://localhost:4000
+<<<<<<< HEAD
+url: http://omarghader.github.io
 
+=======
+url: omarghader.github.io
+>>>>>>> 3b9ae335c5556492b2acd4c6765e74436e7aeebb
 
 # Jekyll configuration
 
