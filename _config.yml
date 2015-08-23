@@ -30,7 +30,7 @@ owner:
   avatar: omar.jpg
   bio: "Android Developer\n Interested in DevOps"
   email: ghader@etud.insa-toulouse.fr
-  disqus-shortname:
+  disqus-shortname: omarghader
   twitter: omarghader
   facebook: #username
   google:
@@ -40,7 +40,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: omarghader
+  github: omar.ghader
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username

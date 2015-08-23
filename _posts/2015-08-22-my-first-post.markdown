@@ -3,6 +3,7 @@ layout: post
 title: My First Post
 modified:
 categories: 
+comments: true
 excerpt: "This post will resume the subjects of my next posts"
 tags: [Android,Java,Android development,DevOps,Ansible,provisionning,vagrant]
 image:
