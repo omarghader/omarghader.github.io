@@ -28,6 +28,7 @@ In addition, Docker have a lot of advantages. let's discover them!
 * Docker have a large community. You can find the answers to all your questions and wonders on : StackOverflow, Github issues ...
 * Docker have a public repository where you can find all applications that you want easily, how to configure it and how the image was built. Per example: you could fine Apache server image, or MySQL Server..
 * Docker is used today by very well know companies such as : Microsoft (that is a partner of Docker too), eBay, Baidu, Groupon... So that's why you should have the curiousity about Docker and to give a try.
+* **Scalability** : docker offer the possibility to make your application scalable by running many instances1 of the same image.
 
 ##How to Install Docker
 
@@ -53,4 +54,4 @@ sudo usermod -aG docker $USER
 
 ###But How to use Docker ?
 
-In my next tutorial, we will maipulate docker containers. and I will show you how we connect a PhpMyAdmin to MySQL Server, both working on different docker containers on the same host.
+In my next tutorial, we will manipulate docker containers. and I will show you how we connect a PhpMyAdmin to MySQL Server, both working on different docker containers on the same host.

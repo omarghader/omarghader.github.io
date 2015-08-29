@@ -4,13 +4,85 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://omarghader.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://omarghader.github.io" />
-<updated>2015-08-24T00:10:58+02:00</updated>
+<updated>2015-08-29T18:09:06+02:00</updated>
 <id>http://omarghader.github.io/</id>
 <author>
   <name>Omar Ghader</name>
   <uri>http://omarghader.github.io/</uri>
   <email>ghader@etud.insa-toulouse.fr</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Docker Tutorial : PhpMyAdmin and MySQL Server]]></title>
+  <link rel="alternate" type="text/html" href="http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/" />
+  <id>http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server</id>
+  <published>2015-08-24T23:57:49+02:00</published>
+  <updated>2015-08-24T23:57:49+02:00</updated>
+  <author>
+    <name>Omar Ghader</name>
+    <uri>http://omarghader.github.io</uri>
+    <email>ghader@etud.insa-toulouse.fr</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;If you are new to Docker or you are wondering why docker is very popular today, I recommend you to read my previous posts &lt;a href=&quot;http://omarghader.github.io&quot;&gt;Introduction to Docker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;pull-containers-from-docker-registry&quot;&gt;Pull Containers from Docker registry&lt;/h2&gt;
+
+&lt;h4 id=&quot;searching-for-containers&quot;&gt;Searching for containers&lt;/h4&gt;
+&lt;p&gt;Docker have a public registry where you could find images of dockerized application that are ready to use. All information and indications for using container are specified too.&lt;/p&gt;
+
+&lt;p&gt;In this post, I will show you how to connect &lt;strong&gt;PhpMyAdmin&lt;/strong&gt; container  to &lt;strong&gt;MySQL server&lt;/strong&gt; container. First of all, we must pull the images from repository. In order to find the image that you want, you can :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;&lt;a href=&quot;http://hub.docker.com&quot;&gt;Docker Hub&lt;/a&gt;&lt;/strong&gt; and search for the corresponding image&lt;/li&gt;
+  &lt;li&gt;Using docker command-line to search : docker search &lt;strong&gt;image&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I recommend you to look at Docker Hub website for the first time. Then, try to understand how the image work by reading author instructions. Now we will pull 2 containers that i chose from Docker hub.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#  Pull containers&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo docker pull mysql/mysql-server
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo docker pull corbinu/docker-phpmyadmin
+
+&lt;span class=&quot;c&quot;&gt;# Verify that images are pulled correctly&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo docker images&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;running-mysql-server-container&quot;&gt;Running MySQL Server container&lt;/h3&gt;
+
+&lt;p&gt;After downloading the image, we must configure and run the container. You’ll notice that a lot of containers is configured by pre-defining ENVIRONNEMENT VARIABLES before running the application. For the first time, i agree that it’s not easy to manipulate containers and to understand how it runs. But later, i think that docker will be your best friend ^^.&lt;/p&gt;
+
+&lt;p&gt;Docker command line have many options&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run --name name-of-container -e &lt;span class=&quot;nv&quot;&gt;YOUR_ENV_VARIABLE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;var1 -p host-port:container-port name-of-image &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;-e : to indicate the declaration of Environnemnt variable inside the container&lt;/li&gt;
+  &lt;li&gt;-d : run the container in background&lt;/li&gt;
+  &lt;li&gt;-p : bind container port to host port&lt;/li&gt;
+  &lt;li&gt;–name : to name the container generated&lt;/li&gt;
+  &lt;li&gt;–link : link 2 containers together.&lt;/li&gt;
+  &lt;li&gt;command : optionnally we can add a command to be executed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now, let’s run mysql container now :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo docker run --name mysql-container -e &lt;span class=&quot;nv&quot;&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mypassword -d mysql/mysql-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;running-phpmyadmin-container&quot;&gt;Running PhpMyAdmin container&lt;/h3&gt;
+&lt;p&gt;Phpmyadmin must point to MySQL Server. So that we must link both containers by adding the option : –link name-of-container:name-of-imag.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run -d --link mysql-container:mysql --name phpmyadmin -e &lt;span class=&quot;nv&quot;&gt;MYSQL_USERNAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;root  -p 80:80 corbinu/docker-phpmyadmin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;testing-connectivity&quot;&gt;Testing connectivity&lt;/h2&gt;
+
+&lt;p&gt;Now go to your browser , tap &lt;a href=&quot;http://localhost:80&quot;&gt;http://localhost:80&lt;/a&gt; and Voilà your containers work fine.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/&quot;&gt;Docker Tutorial : PhpMyAdmin and MySQL Server&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://omarghader.github.io&quot;&gt;OmarG's Blog&lt;/a&gt; on August 24, 2015.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -47,6 +119,7 @@ Docker is using 2 terms : image and container:&lt;/p&gt;
   &lt;li&gt;Docker have a large community. You can find the answers to all your questions and wonders on : StackOverflow, Github issues …&lt;/li&gt;
   &lt;li&gt;Docker have a public repository where you can find all applications that you want easily, how to configure it and how the image was built. Per example: you could fine Apache server image, or MySQL Server..&lt;/li&gt;
   &lt;li&gt;Docker is used today by very well know companies such as : Microsoft (that is a partner of Docker too), eBay, Baidu, Groupon… So that’s why you should have the curiousity about Docker and to give a try.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Scalability&lt;/strong&gt; : docker offer the possibility to make your application scalable by running many instances1 of the same image.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;how-to-install-docker&quot;&gt;How to Install Docker&lt;/h2&gt;
@@ -69,7 +142,7 @@ Docker is using 2 terms : image and container:&lt;/p&gt;
 
 &lt;h3 id=&quot;but-how-to-use-docker-&quot;&gt;But How to use Docker ?&lt;/h3&gt;
 
-&lt;p&gt;In my next tutorial, we will maipulate docker containers. and I will show you how we connect a PhpMyAdmin to MySQL Server, both working on different docker containers on the same host.&lt;/p&gt;
+&lt;p&gt;In my next tutorial, we will manipulate docker containers. and I will show you how we connect a PhpMyAdmin to MySQL Server, both working on different docker containers on the same host.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://omarghader.github.io/introduction-to-docker/&quot;&gt;Introduction to Docker&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://omarghader.github.io&quot;&gt;OmarG's Blog&lt;/a&gt; on August 23, 2015.&lt;/p&gt;
   </content>
