@@ -5,15 +5,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Docker Tutorial : PhpMyAdmin and MySQL Server &#8211; OmarG's Blog</title>
-<meta name="description" content="connect PhpMyAdmin container  to MySQL server container">
-<meta name="keywords" content="tutorial docker mysql, tutorial, docker, devops, docker linking containers">
+<title>Executing R From Java Using JRI Library &#8211; OmarG's Blog</title>
+<meta name="description" content="JRI tutorial">
+<meta name="keywords" content="R, JAVA, JRI, jri tutorial, machine learning">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Docker Tutorial : PhpMyAdmin and MySQL Server">
-<meta name="twitter:description" content="connect PhpMyAdmin container  to MySQL server container">
+<meta name="twitter:title" content="Executing R From Java Using JRI Library">
+<meta name="twitter:description" content="JRI tutorial">
 <meta name="twitter:site" content="@omarghader">
 <meta name="twitter:creator" content="@omarghader">
 
@@ -23,9 +23,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker Tutorial : PhpMyAdmin and MySQL Server">
-<meta property="og:description" content="connect PhpMyAdmin container  to MySQL server container">
-<meta property="og:url" content="http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/">
+<meta property="og:title" content="Executing R From Java Using JRI Library">
+<meta property="og:description" content="JRI tutorial">
+<meta property="og:url" content="http://omarghader.github.io/executing-r-from-java-using-jri-library/">
 <meta property="og:site_name" content="OmarG's Blog">
 
 <meta property="og:image" content="http://omarghader.github.io/images/default-thumb.png">
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/">
+<link rel="canonical" href="http://omarghader.github.io/executing-r-from-java-using-jri-library/">
 <link href="http://omarghader.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="OmarG's Blog Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -144,62 +144,48 @@
   <article class="post">
     <div class="headline-wrap">
       
-        <h1><a href="http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/" rel="bookmark" title="Docker Tutorial : PhpMyAdmin and MySQL Server">Docker Tutorial : PhpMyAdmin and MySQL Server</a></h1>
+        <h1><a href="http://omarghader.github.io/executing-r-from-java-using-jri-library/" rel="bookmark" title="Executing R From Java Using JRI Library">Executing R From Java Using JRI Library</a></h1>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>If you are new to Docker or you are wondering why docker is very popular today, I recommend you to read my previous posts <a href="http://omarghader.github.io">Introduction to Docker</a>.</p>
+      <p>R is a very powerfull language designed for mathematics and statistics. It became one of the best data analysis tools due to its performance and its syntax simplicity. R can import dataset or generate a csv file with 1 line of code.</p>
 
-<h2 id="pull-containers-from-docker-registry">Pull Containers from Docker registry</h2>
+<p>So, It will very useful to useful to use R with one of the most known programming languages : JAVA. After using JRI library, i will show you how to assign variables, run R scripts…. in Java.</p>
 
-<h4 id="searching-for-containers">Searching for containers</h4>
-<p>Docker have a public registry where you could find images of dockerized application that are ready to use. All information and indications for using container are specified too.</p>
+<h3 id="initializing-r-engine">Initializing R engine</h3>
 
-<p>In this post, I will show you how to connect <strong>PhpMyAdmin</strong> container  to <strong>MySQL server</strong> container. First of all, we must pull the images from repository. In order to find the image that you want, you can :</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span><span class="o">[]</span> <span class="n">arg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]{</span><span class="s">&quot;--vanilla&quot;</span><span class="o">};</span>
+<span class="n">Rengine</span> <span class="n">rengine</span><span class="o">=</span> <span class="k">new</span> <span class="nf">Rengine</span><span class="o">(</span><span class="n">arg</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span></code></pre></div>
 
-<ul>
-  <li>Go to <strong><a href="http://hub.docker.com">Docker Hub</a></strong> and search for the corresponding image</li>
-  <li>Using docker command-line to search : docker search <strong>image</strong></li>
-</ul>
+<h3 id="double-variable">Double variable</h3>
+<p><strong>eval(“command”)</strong> method  will execute the command in R engine.</p>
 
-<p>I recommend you to look at Docker Hub website for the first time. Then, try to understand how the image work by reading author instructions. Now we will pull 2 containers that i chose from Docker hub.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">rengine</span><span class="o">.</span><span class="na">eval</span><span class="o">(</span><span class="s">&quot;x=13.5&quot;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">rengine</span><span class="o">.</span><span class="na">eval</span><span class="o">(</span><span class="s">&quot;x&quot;</span><span class="o">).</span><span class="na">asDouble</span><span class="o">());</span>
+<span class="c1">// output</span>
+<span class="c1">// 13.5</span></code></pre></div>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#  Pull containers</span>
-<span class="nv">$ </span>sudo docker pull mysql/mysql-server
-<span class="nv">$ </span>sudo docker pull corbinu/docker-phpmyadmin
+<h3 id="dataframe">DataFrame</h3>
+<p>REXP is the default class for the result object. If you want to convert the result to Double, Int, Boolean.. you must use REXP methods like: .asDouble(),.asInt(),asBool() …</p>
 
-<span class="c"># Verify that images are pulled correctly</span>
-<span class="nv">$ </span>sudo docker images</code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">rengine</span><span class="o">.</span><span class="na">eval</span><span class="o">(</span><span class="s">&quot;myData=data.frame(x=c(&#39;v&#39;,&#39;d&#39;),y=c(&#39;e&#39;,&#39;f&#39;))&quot;</span><span class="o">);</span>
+<span class="n">REXP</span> <span class="n">dataFrame</span><span class="o">=</span><span class="n">rengine</span><span class="o">.</span><span class="na">eval</span><span class="o">(</span><span class="s">&quot;myData&quot;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dataFrame</span><span class="o">);</span> <span class="c1">//Vector containing 2 Factors</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dataFrame</span><span class="o">.</span><span class="na">asVector</span><span class="o">().</span><span class="na">at</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dataFrame</span><span class="o">.</span><span class="na">asVector</span><span class="o">().</span><span class="na">at</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="na">asFactor</span><span class="o">().</span><span class="na">at</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
 
-<h3 id="running-mysql-server-container">Running MySQL Server container</h3>
+<span class="c1">// output</span>
+<span class="c1">// [VECTOR ([FACTOR {levels=(&quot;d&quot;,&quot;v&quot;),ids=(1,0)}], [FACTOR {levels=(&quot;e&quot;,&quot;f&quot;),ids=(0,1)}])]</span>
+<span class="c1">// [FACTOR {levels=(&quot;e&quot;,&quot;f&quot;),ids=(0,1)}]</span>
+<span class="c1">// f</span></code></pre></div>
 
-<p>After downloading the image, we must configure and run the container. You’ll notice that a lot of containers is configured by pre-defining ENVIRONNEMENT VARIABLES before running the application. For the first time, i agree that it’s not easy to manipulate containers and to understand how it runs. But later, i think that docker will be your best friend ^^.</p>
+<h3 id="rbool">RBool</h3>
 
-<p>Docker command line have many options</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">RBool</span> <span class="n">bool</span><span class="o">=</span><span class="n">rengine</span><span class="o">.</span><span class="na">eval</span><span class="o">(</span><span class="s">&quot;1==0&quot;</span><span class="o">).</span><span class="na">asBool</span><span class="o">();</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">bool</span><span class="o">);</span>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run --name name-of-container -e <span class="nv">YOUR_ENV_VARIABLE</span><span class="o">=</span>var1 -p host-port:container-port name-of-image <span class="o">(</span><span class="nb">command</span><span class="o">)</span></code></pre></div>
-
-<ul>
-  <li>-e : to indicate the declaration of Environnemnt variable inside the container</li>
-  <li>-d : run the container in background</li>
-  <li>-p : bind container port to host port</li>
-  <li>–name : to name the container generated</li>
-  <li>–link : link 2 containers together.</li>
-  <li>command : optionnally we can add a command to be executed.</li>
-</ul>
-
-<p>Now, let’s run mysql container now :</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo docker run --name mysql-container -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>mypassword -d mysql/mysql-server</code></pre></div>
-
-<h3 id="running-phpmyadmin-container">Running PhpMyAdmin container</h3>
-<p>Phpmyadmin must point to MySQL Server. So that we must link both containers by adding the option : –link name-of-container:name-of-imag.</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>docker run -d --link mysql-container:mysql --name phpmyadmin -e <span class="nv">MYSQL_USERNAME</span><span class="o">=</span>root  -p 80:80 corbinu/docker-phpmyadmin</code></pre></div>
-
-<h2 id="testing-connectivity">Testing connectivity</h2>
-
-<p>Now go to your browser , tap <a href="http://localhost:80">http://localhost:80</a> and Voilà your containers work fine.</p>
+<span class="c1">// output</span>
+<span class="c1">// FALSE</span></code></pre></div>
 
       <hr />
       <footer role="contentinfo">
@@ -207,17 +193,17 @@
   <h4>Share on</h4>
   <ul>
     <li>
-      <a href="https://twitter.com/intent/tweet?text=http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://omarghader.github.io/executing-r-from-java-using-jri-library/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
     </li>
     <li>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://omarghader.github.io/executing-r-from-java-using-jri-library/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
     </li>
     <li>
-      <a href="https://plus.google.com/share?url=http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+      <a href="https://plus.google.com/share?url=http://omarghader.github.io/executing-r-from-java-using-jri-library/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
     </li>
   </ul>
 </div><!-- /.social-share -->
-        <p class="byline"><strong>Docker Tutorial : PhpMyAdmin and MySQL Server</strong> was published on <time datetime="2015-08-24T23:57:49+02:00">August 24, 2015</time>.</p>
+        <p class="byline"><strong>Executing R From Java Using JRI Library</strong> was published on <time datetime="2015-09-03T13:03:09+02:00">September 03, 2015</time>.</p>
       </footer>
     </div><!-- /.article-wrap -->
 
@@ -233,7 +219,7 @@
   <h4>You might also enjoy <small class="pull-right">(<a href="http://omarghader.github.io/posts/">View all posts</a>)</small></h4>
     <ul>
     
-      <li><a href="http://omarghader.github.io/executing-r-from-java-using-jri-library/" title="Executing R From Java Using JRI Library">Executing R From Java Using JRI Library</a></li>
+      <li><a href="http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/" title="Docker Tutorial : PhpMyAdmin and MySQL Server">Docker Tutorial : PhpMyAdmin and MySQL Server</a></li>
     
       <li><a href="http://omarghader.github.io/introduction-to-docker/" title="Introduction to Docker">Introduction to Docker</a></li>
     
@@ -304,7 +290,7 @@
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="/docker-tutorial-phpmyadmin-and-mysql-server/"
+      data-href="/executing-r-from-java-using-jri-library/"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
