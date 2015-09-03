@@ -11,9 +11,9 @@ image:
 date: 2015-09-03T13:03:09+02:00
 ---
 
-R is a very powerfull language designed for mathematics and statistics. It became one of the best data analysis tools due to its performance and its syntax simplicity. R can import dataset or generate a csv file with 1 line of code.
+R is a very powerful language designed for mathematics and statistics. It became one of the best data analysis tools due to its performance and its syntax simplicity. R can import datasets or generate a csv file with 1 line of code.
 
-So, It will very useful to useful to use R with one of the most known programming languages : JAVA. After using JRI library, i will show you how to assign variables, run R scripts.... in Java.
+So, It will be very important to use R with one of the most known programming languages : JAVA. Using JRI library, i will show you how to assign variables, run R scripts.... in Java.
 
 ###Initializing R engine 
 {% highlight java %}
@@ -54,4 +54,9 @@ System.out.println(bool);
 
 // output
 // FALSE
+{% endhighlight %}
+
+### Running R script
+{% highlight java %}
+rengine.eval("source(\"path/to/your/script\")");
 {% endhighlight %}
