@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://omarghader.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://omarghader.github.io" />
-<updated>2015-09-03T13:58:45+02:00</updated>
+<updated>2015-10-14T21:58:31+02:00</updated>
 <id>http://omarghader.github.io/</id>
 <author>
   <name>Omar Ghader</name>
@@ -27,9 +27,9 @@
     <email>ghader@etud.insa-toulouse.fr</email>
   </author>
   <content type="html">
-    &lt;p&gt;R is a very powerfull language designed for mathematics and statistics. It became one of the best data analysis tools due to its performance and its syntax simplicity. R can import dataset or generate a csv file with 1 line of code.&lt;/p&gt;
+    &lt;p&gt;R is a very powerful language designed for mathematics and statistics. It became one of the best data analysis tools due to its performance and its syntax simplicity. R can import datasets or generate a csv file with 1 line of code.&lt;/p&gt;
 
-&lt;p&gt;So, It will very useful to useful to use R with one of the most known programming languages : JAVA. After using JRI library, i will show you how to assign variables, run R scripts…. in Java.&lt;/p&gt;
+&lt;p&gt;So, It will be very important to use R with one of the most known programming languages : JAVA. Using JRI library, i will show you how to assign variables, run R scripts…. in Java.&lt;/p&gt;
 
 &lt;h3 id=&quot;initializing-r-engine&quot;&gt;Initializing R engine&lt;/h3&gt;
 
@@ -65,6 +65,10 @@
 
 &lt;span class=&quot;c1&quot;&gt;// output&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// FALSE&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;running-r-script&quot;&gt;Running R script&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;rengine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;eval&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;source(\&amp;quot;path/to/your/script\&amp;quot;)&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://omarghader.github.io/executing-r-from-java-using-jri-library/&quot;&gt;Executing R From Java Using JRI Library&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://omarghader.github.io&quot;&gt;OmarG's Blog&lt;/a&gt; on September 03, 2015.&lt;/p&gt;
   </content>
