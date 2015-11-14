@@ -27,19 +27,19 @@ kramdown:
 owner:
   name: Omar Ghader
   avatar: omar.jpg
-  bio: "Android Developer\n Interested in DevOps"
+  bio: "FullStack Engineer, Security DevOps & Mobile Developer"
   email: ghader@etud.insa-toulouse.fr
   disqus-shortname: omarghader
   twitter: omarghader
   facebook: #username
   google:
-    plus: omarghader
+    plus: omar.ghader
     analytics:
     verify:
     ad-client:
     ad-slot:
   bing-verify:
-  github: omar.ghader
+  github: omarghader
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username
