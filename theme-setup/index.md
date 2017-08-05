@@ -184,7 +184,7 @@ These two layouts are very similar. Both have an author sidebar, allow for large
 
 ### Post Index Page
 
-A [sample index page]({{ site.url }}/posts/) listing all posts grouped by the year they were published has been provided. The name can be customized to your liking by editing a few references. For example, to change **Posts** to **Writing** update the following:
+A [sample index page](/posts/) listing all posts grouped by the year they were published has been provided. The name can be customized to your liking by editing a few references. For example, to change **Posts** to **Writing** update the following:
 
 * In `_config.yml` under `links:` rename the title and URL to the following:
 {% highlight yaml %}
@@ -273,7 +273,7 @@ To include an auto-generated **table of contents** for posts and pages, add the 
 By default the margin below paragraphs has been removed and indent added to each. This is an intentional design decision to mimic the look of type set in a printed book or manuscript.
 
 <figure>
-  <img src="{{ site.url }}/images/paragraph-indent.png" alt="screen shot of paragraphs with default indent style set">
+  <img src="/images/paragraph-indent.png" alt="screen shot of paragraphs with default indent style set">
   <figcaption>Example of the default paragraph style (indented first line and bottom margin removed).</figcaption>
 </figure>
 
@@ -284,7 +284,7 @@ $paragraph-indent: false;
 {% endhighlight %}
 
 <figure>
-  <img src="{{ site.url }}/images/paragraph-no-indent.png" alt="screen shot of paragraphs with indent style disabled">
+  <img src="/images/paragraph-no-indent.png" alt="screen shot of paragraphs with indent style disabled">
   <figcaption>Example of paragraphs with $paragraph-indent disabled.</figcaption>
 </figure>
 

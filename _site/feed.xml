@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">OmarG's Blog</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://omarghader.github.io/feed.xml" />
-<link rel="alternate" type="text/html" href="http://omarghader.github.io" />
-<updated>2015-11-14T16:44:02+01:00</updated>
-<id>http://omarghader.github.io/</id>
+<link rel="self" type="application/atom+xml" href="/feed.xml" />
+<link rel="alternate" type="text/html" href="" />
+<updated>2017-08-05T20:30:33+02:00</updated>
+<id>/</id>
 <author>
   <name>Omar Ghader</name>
-  <uri>http://omarghader.github.io/</uri>
+  <uri>/</uri>
   <email>ghader@etud.insa-toulouse.fr</email>
 </author>
 
@@ -17,13 +17,13 @@
 
 <entry>
   <title type="html"><![CDATA[Executing R From Java Using JRI Library]]></title>
-  <link rel="alternate" type="text/html" href="http://omarghader.github.io/executing-r-from-java-using-jri-library/" />
-  <id>http://omarghader.github.io/executing-r-from-java-using-jri-library</id>
+  <link rel="alternate" type="text/html" href="/executing-r-from-java-using-jri-library/" />
+  <id>/executing-r-from-java-using-jri-library</id>
   <published>2015-09-03T13:03:09+02:00</published>
   <updated>2015-09-03T13:03:09+02:00</updated>
   <author>
     <name>Omar Ghader</name>
-    <uri>http://omarghader.github.io</uri>
+    <uri></uri>
     <email>ghader@etud.insa-toulouse.fr</email>
   </author>
   <content type="html">
@@ -70,7 +70,7 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;rengine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;eval&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;source(\&amp;quot;path/to/your/script\&amp;quot;)&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://omarghader.github.io/executing-r-from-java-using-jri-library/&quot;&gt;Executing R From Java Using JRI Library&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://omarghader.github.io&quot;&gt;OmarG's Blog&lt;/a&gt; on September 03, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/executing-r-from-java-using-jri-library/&quot;&gt;Executing R From Java Using JRI Library&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;&quot;&gt;OmarG's Blog&lt;/a&gt; on September 03, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -79,13 +79,13 @@
 
 <entry>
   <title type="html"><![CDATA[Docker Tutorial : PhpMyAdmin and MySQL Server]]></title>
-  <link rel="alternate" type="text/html" href="http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/" />
-  <id>http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server</id>
+  <link rel="alternate" type="text/html" href="/docker-tutorial-phpmyadmin-and-mysql-server/" />
+  <id>/docker-tutorial-phpmyadmin-and-mysql-server</id>
   <published>2015-08-24T23:57:49+02:00</published>
   <updated>2015-08-24T23:57:49+02:00</updated>
   <author>
     <name>Omar Ghader</name>
-    <uri>http://omarghader.github.io</uri>
+    <uri></uri>
     <email>ghader@etud.insa-toulouse.fr</email>
   </author>
   <content type="html">
@@ -106,11 +106,11 @@
 &lt;p&gt;I recommend you to look at Docker Hub website for the first time. Then, try to understand how the image work by reading author instructions. Now we will pull 2 containers that i chose from Docker hub.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#  Pull containers&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo docker pull mysql/mysql-server
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo docker pull corbinu/docker-phpmyadmin
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker pull mysql/mysql
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker pull phpmyadmin/phpmyadmin
 
 &lt;span class=&quot;c&quot;&gt;# Verify that images are pulled correctly&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo docker images&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker images&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;running-mysql-server-container&quot;&gt;Running MySQL Server container&lt;/h3&gt;
 
@@ -131,18 +131,19 @@
 
 &lt;p&gt;Now, let’s run mysql container now :&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo docker run --name mysql-container -e &lt;span class=&quot;nv&quot;&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mypassword -d mysql/mysql-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run --name mysql -e &lt;span class=&quot;nv&quot;&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0000&lt;/span&gt; -d mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;running-phpmyadmin-container&quot;&gt;Running PhpMyAdmin container&lt;/h3&gt;
 &lt;p&gt;Phpmyadmin must point to MySQL Server. So that we must link both containers by adding the option : –link name-of-container:name-of-imag.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run -d --link mysql-container:mysql --name phpmyadmin -e &lt;span class=&quot;nv&quot;&gt;MYSQL_USERNAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;root  -p 80:80 corbinu/docker-phpmyadmin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run --name myadmin -d --link mysql:db -p 8080:80 phpmyadmin/phpmyadmin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;testing-connectivity&quot;&gt;Testing connectivity&lt;/h2&gt;
 
-&lt;p&gt;Now go to your browser , tap &lt;a href=&quot;http://localhost:80&quot;&gt;http://localhost:80&lt;/a&gt; and Voilà your containers work fine.&lt;/p&gt;
+&lt;p&gt;Now go to your browser , tap &lt;a href=&quot;http://localhost:8080&quot;&gt;http://localhost:8080&lt;/a&gt; and login with root/0000 .
+Voilà your containers work fine.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/&quot;&gt;Docker Tutorial : PhpMyAdmin and MySQL Server&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://omarghader.github.io&quot;&gt;OmarG's Blog&lt;/a&gt; on August 24, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/docker-tutorial-phpmyadmin-and-mysql-server/&quot;&gt;Docker Tutorial : PhpMyAdmin and MySQL Server&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;&quot;&gt;OmarG's Blog&lt;/a&gt; on August 24, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -151,13 +152,13 @@
 
 <entry>
   <title type="html"><![CDATA[Introduction to Docker]]></title>
-  <link rel="alternate" type="text/html" href="http://omarghader.github.io/introduction-to-docker/" />
-  <id>http://omarghader.github.io/introduction-to-docker</id>
+  <link rel="alternate" type="text/html" href="/introduction-to-docker/" />
+  <id>/introduction-to-docker</id>
   <published>2015-08-23T15:14:25+02:00</published>
   <updated>2015-08-23T15:14:25+02:00</updated>
   <author>
     <name>Omar Ghader</name>
-    <uri>http://omarghader.github.io</uri>
+    <uri></uri>
     <email>ghader@etud.insa-toulouse.fr</email>
   </author>
   <content type="html">
@@ -206,7 +207,7 @@ Docker is using 2 terms : image and container:&lt;/p&gt;
 
 &lt;p&gt;In my next tutorial, we will manipulate docker containers. and I will show you how we connect a PhpMyAdmin to MySQL Server, both working on different docker containers on the same host.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://omarghader.github.io/introduction-to-docker/&quot;&gt;Introduction to Docker&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://omarghader.github.io&quot;&gt;OmarG's Blog&lt;/a&gt; on August 23, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/introduction-to-docker/&quot;&gt;Introduction to Docker&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;&quot;&gt;OmarG's Blog&lt;/a&gt; on August 23, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -215,13 +216,13 @@ Docker is using 2 terms : image and container:&lt;/p&gt;
 
 <entry>
   <title type="html"><![CDATA[My First Post]]></title>
-  <link rel="alternate" type="text/html" href="http://omarghader.github.io/my-first-post/" />
-  <id>http://omarghader.github.io/my-first-post</id>
+  <link rel="alternate" type="text/html" href="/my-first-post/" />
+  <id>/my-first-post</id>
   <published>2015-08-22T21:08:08+02:00</published>
   <updated>2015-08-22T21:08:08+02:00</updated>
   <author>
     <name>Omar Ghader</name>
-    <uri>http://omarghader.github.io</uri>
+    <uri></uri>
     <email>ghader@etud.insa-toulouse.fr</email>
   </author>
   <content type="html">
@@ -243,7 +244,7 @@ DevOps’ goal is the automatization of deployment in an efficient way.
 Provisionning is a part of DevOps. Most known provisionning tools are: Puppet, SaltStack , Chef , Ansible …
 I will discuss some of these tools and the way to use it.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://omarghader.github.io/my-first-post/&quot;&gt;My First Post&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;http://omarghader.github.io&quot;&gt;OmarG's Blog&lt;/a&gt; on August 22, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/my-first-post/&quot;&gt;My First Post&lt;/a&gt; was originally published by Omar Ghader at &lt;a href=&quot;&quot;&gt;OmarG's Blog&lt;/a&gt; on August 22, 2015.&lt;/p&gt;
   </content>
 </entry>
 
