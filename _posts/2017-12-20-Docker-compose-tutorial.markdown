@@ -4,7 +4,7 @@ title: Docker Compose Tutorial
 modified:
 categories: docker
 comments: true
-excerpt: "This post will resume the subjects of my next posts"
+excerpt: "Learn docker-compose with simplicity"
 tags: [Docker, compose, tutorial, swarm, devops, mysql, phpmyadmin, omarghader]
 date: 2017-12-20T21:10:06+02:00
 ---
