@@ -42,7 +42,6 @@
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
       {{ content }}
-      {% include _google_adsense.html %}
       <hr />
       <footer role="contentinfo">
         {% if page.share != false %}{% include _social-share.html %}{% endif %}
@@ -74,6 +73,7 @@
 </div><!-- /.footer-wrap -->
 
 {% include _scripts.html %}
+{% include _google_adsense.html %}
 {% include google_analytics.html %}
 {% include _comments.html %}
 </body>
