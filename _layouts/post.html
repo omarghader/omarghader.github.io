@@ -48,8 +48,11 @@
         <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
       </footer>
     </div><!-- /.article-wrap -->
-
-  {% if site.owner.disqus-shortname and page.comments == true %}
+    
+    <!-- Cloudways -->
+    <a href="https://www.cloudways.com/en/?id=411344&amp;a_bid=61dde566" target="_top"><img src="//www.cloudways.com/affiliate/accounts/default1/banners/61dde566.jpg" alt="The Ultimate Managed Hosting Platform" title="The Ultimate Managed Hosting Platform" width="728" height="90" /></a><img style="border:0" src="https://www.cloudways.com/affiliate/scripts/imp.php?id=411344&amp;a_bid=61dde566" width="1" height="1" alt="" />
+  
+    {% if site.owner.disqus-shortname and page.comments == true %}
     <section id="disqus_thread"></section><!-- /#disqus_thread -->
   {% endif %}
   </article>
