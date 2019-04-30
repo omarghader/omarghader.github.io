@@ -5,7 +5,8 @@ modified:
 categories: docker
 comments: true
 excerpt: "Learn docker-compose with simplicity"
-tags: [Docker, compose, tutorial, swarm, devops, mysql, phpmyadmin, omarghader]
+tags: [docker,compose,tutorial,mysql,phpmyadmin,devops]
+description: docker compose tutorial phpmyadmin mysql for beginners
 date: 2017-12-20T21:10:06+02:00
 ---
 
