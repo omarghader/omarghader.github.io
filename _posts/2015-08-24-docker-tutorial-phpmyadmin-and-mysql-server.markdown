@@ -6,7 +6,7 @@ categories:
 excerpt: connect PhpMyAdmin container  to MySQL server container
 comments: true
 description: docker phpmyadmin mysql tutorial for beginners
-tags: [docker,phpmyadmin,mysql,tutorial,beginners]
+tags: [docker,phpmyadmin,mysql,tutorial,docker phpmyadmin tutorial, docker phpmyadmin mysql,install phpmyadmin in docker container, docker mysql]
 image:
   feature:
 date: 2015-08-24T23:57:49+02:00
