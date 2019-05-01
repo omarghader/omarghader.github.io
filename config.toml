@@ -1,0 +1,51 @@
+baseUrl         = "http://omarghader.github.io"
+theme           = "casper-two"
+languageCode    = "en-US"
+disqusShortname = "omarghader"
+paginate        = 6
+enableSharing   = true
+#SectionPagesMenu = "main"
+
+[params]
+  title       = "Omar Ghader's Blog"
+  subtitle    = "Spread information, let the world learn"
+
+  cover       = "img/blog-cover.jpg"
+  description = "Learn new development technologies and devops tools in an easy way."
+  metaDescription = ""
+  googleAnalytics = "UA-66637295-1"
+  customCSS = ["css/custom.css"]
+  RSSLink = ""
+
+  twitterName = ""
+  fbName = ""
+  githubName = "omarghader"
+
+  logo = "img/logo.png"
+  orgName = "omarghader"
+  orgWebsite = "https://omarghader.github.io"
+  orgDescription = "Spread information, let the world learn"
+
+  author = "Omar Ghader"
+  authorAvatar = "img/me/omar.jpg"
+  authorLocation = "FR"
+  authorWebsite = "https://omarghader.github.io"
+  authorDescription = "Fullstack web engineer and devops. Google Mobile web specialist"
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  #casper or caspertwo
+  singleViewStyle = "casper"
+
+[permalinks]
+  post = "/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 200
+
+[[menu.main]]
+  name = "About"
+  url = "/about"
+  weight = 99
