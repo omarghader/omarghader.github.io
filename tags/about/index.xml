@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on </title>
-    <link>http://omarghader.github.io/tags/about/</link>
+    <link>https://omarghader.github.io/tags/about/</link>
     <description>Recent content in About on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 08 Aug 2014 20:53:07 -0400</lastBuildDate>
     
-	<atom:link href="http://omarghader.github.io/tags/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://omarghader.github.io/tags/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About me</title>
-      <link>http://omarghader.github.io/about/</link>
+      <link>https://omarghader.github.io/about/</link>
       <pubDate>Fri, 08 Aug 2014 20:53:07 -0400</pubDate>
       
-      <guid>http://omarghader.github.io/about/</guid>
+      <guid>https://omarghader.github.io/about/</guid>
       <description> Master of Software and Network Engineering at INSA de Toulouse. I specialize in Internet Of Things (IoT). Software FullStack Engineer, DevOps and Mobile Developer. I am very passionated by new technologies, curious and always motivated.
 Achievements :  Android application : 45000 downloads (in 6 months)  Backend :  Languages: Go lang, Java ,C, python, NodeJs MessageQueue : RabbitMq Relational Database : MongoDB, MySql, PostgreSql Graph Database : Neo4j  DevOps :  provisioning : Ansible, Salt Stack, Puppet virtualization : Vagrant , Docker Scalability : HaProxy , confd, Creation of Micro-Services Discovery : etcd Orchestration : Kubernetes  Frontend :  HTML5 ,JS, CSS Mobile : Ionic, Angularjs, ReactJs, Native (java) Framework : Bootstrap, Material Design UI / UX  Data Science and Big Data :  Machine Learning : R, H2o Data&amp;rsquo;s Features Extraction Data cleaning Behavior Detection ( Prediction )  </description>
     </item>
