@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Docker compose tutorial nginx
+title: Docker Compose Nginx Tutorial
 modified:
 categories:
 comments: true
-excerpt: "docker compose nginx configuration"
+excerpt: "Docker compose nginx configuration tutorial"
 tags: [docker compose nginx config, docker nginx proxy, docker compose tutorial, docker compose nginx reverse proxy]
 image:
-  feature: sample-image-1.jpg
+  feature: 
   thumb:
 date: 2019-05-01T21:09:04+02:00
 ---
