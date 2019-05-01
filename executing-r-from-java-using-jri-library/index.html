@@ -105,7 +105,7 @@
         <h1 class="post-full-title">Executing R From Java Using JRI Library</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(http://omarghader.github.iodefimg/4.jpg)">
+    <figure class="post-full-image" style="background-image: url(http://omarghader.github.iodefimg/3.jpg)">
     </figure>
 
     <section class="post-full-content">
@@ -116,53 +116,52 @@
 
 <p>So, It will be very important to use R with one of the most known programming languages : JAVA. Using JRI library, i will show you how to assign variables, run R scripts&hellip;. in Java.</p>
 
-<p>###Initializing R engine
-{% highlight java %}
-String[] arg = new String[]{&ldquo;&ndash;vanilla&rdquo;};
-Rengine rengine= new Rengine(arg, false, null);
-{% endhighlight %}</p>
+<h3 id="initializing-r-engine">Initializing R engine</h3>
 
-<p>###Double variable
-<strong>eval(&ldquo;command&rdquo;)</strong> method  will execute the command in R engine.
-{% highlight java %}
-rengine.eval(&ldquo;x=13.5&rdquo;);
-System.out.println(rengine.eval(&ldquo;x&rdquo;).asDouble());
+<pre><code class="language-java">String[] arg = new String[]{&quot;--vanilla&quot;};
+Rengine rengine= new Rengine(arg, false, null);
+</code></pre>
+
+<h3 id="double-variable">Double variable</h3>
+
+<p><strong>eval(&ldquo;command&rdquo;)</strong> method  will execute the command in R engine.</p>
+
+<pre><code class="language-java">rengine.eval(&quot;x=13.5&quot;);
+System.out.println(rengine.eval(&quot;x&quot;).asDouble());
 // output
 // 13.5
-{% endhighlight %}</p>
+</code></pre>
 
 <h3 id="dataframe">DataFrame</h3>
 
-<p>REXP is the default class for the result object. If you want to convert the result to Double, Int, Boolean.. you must use REXP methods like: .asDouble(),.asInt(),asBool() &hellip;
-{% highlight java %}
-rengine.eval(&ldquo;myData=data.frame(x=c(&lsquo;v&rsquo;,&rsquo;d&rsquo;),y=c(&lsquo;e&rsquo;,&lsquo;f&rsquo;))&rdquo;);
-REXP dataFrame=rengine.eval(&ldquo;myData&rdquo;);
+<p>REXP is the default class for the result object. If you want to convert the result to Double, Int, Boolean.. you must use REXP methods like: .asDouble(),.asInt(),asBool() &hellip;</p>
+
+<pre><code class="language-java">rengine.eval(&quot;myData=data.frame(x=c('v','d'),y=c('e','f'))&quot;);
+REXP dataFrame=rengine.eval(&quot;myData&quot;);
 System.out.println(dataFrame); //Vector containing 2 Factors
 System.out.println(dataFrame.asVector().at(1));
-System.out.println(dataFrame.asVector().at(1).asFactor().at(1));</p>
+System.out.println(dataFrame.asVector().at(1).asFactor().at(1));
 
-<p>// output
-// [VECTOR ([FACTOR {levels=(&ldquo;d&rdquo;,&ldquo;v&rdquo;),ids=(1,0)}], [FACTOR {levels=(&ldquo;e&rdquo;,&ldquo;f&rdquo;),ids=(0,1)}])]
-// [FACTOR {levels=(&ldquo;e&rdquo;,&ldquo;f&rdquo;),ids=(0,1)}]
-// f</p>
+// output
+// [VECTOR ([FACTOR {levels=(&quot;d&quot;,&quot;v&quot;),ids=(1,0)}], [FACTOR {levels=(&quot;e&quot;,&quot;f&quot;),ids=(0,1)}])]
+// [FACTOR {levels=(&quot;e&quot;,&quot;f&quot;),ids=(0,1)}]
+// f
 
-<p>{% endhighlight %}</p>
+</code></pre>
 
 <h3 id="rbool">RBool</h3>
 
-<p>{% highlight java %}
-RBool bool=rengine.eval(&ldquo;1==0&rdquo;).asBool();
-System.out.println(bool);</p>
+<pre><code class="language-java">RBool bool=rengine.eval(&quot;1==0&quot;).asBool();
+System.out.println(bool);
 
-<p>// output
+// output
 // FALSE
-{% endhighlight %}</p>
+</code></pre>
 
 <h3 id="running-r-script">Running R script</h3>
 
-<p>{% highlight java %}
-rengine.eval(&ldquo;source(\&ldquo;path/to/your/script\&ldquo;)&rdquo;);
-{% endhighlight %}</p>
+<pre><code class="language-java">rengine.eval(&quot;source(\&quot;path/to/your/script\&quot;)&quot;);
+</code></pre>
     
         </div>
     </section>
@@ -223,13 +222,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="http://omarghader.github.io/configuring-node-js-on-jenkins-using-docker/">Configuring Node js on Jenkins using docker</a></li>            
+                      
         
-          <li><a href="http://omarghader.github.io/docker-compose-nginx-tutorial/">Docker Compose Nginx Tutorial</a></li>            
+          <li><a href="http://omarghader.github.io/docker-compose-tutorial/">Docker Compose Tutorial</a></li>            
         
           <li><a href="http://omarghader.github.io/introduction-to-docker/">Introduction to Docker</a></li>            
         
-          <li><a href="http://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/">Docker Tutorial : PhpMyAdmin and MySQL Server</a></li>            
+          <li><a href="http://omarghader.github.io/my-first-post/">My First Post</a></li>            
+        
+          <li><a href="http://omarghader.github.io/configuring-node-js-on-jenkins-using-docker/">Configuring Node js on Jenkins using docker</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -243,7 +244,7 @@ s.setAttribute('data-timestamp', +new Date());
       <article class="post-card post"> 
     
     <a class="post-card-image-link" href="http://omarghader.github.io/docker-compose-tutorial/">
-      <div class="post-card-image" style="background-image: url(http://omarghader.github.iodefimg/6.jpg)"></div>
+      <div class="post-card-image" style="background-image: url(http://omarghader.github.iodefimg/7.jpg)"></div>
     </a>    
     
 
