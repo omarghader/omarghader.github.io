@@ -1,60 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Docker on </title>
-    <link>https://omarghader.github.io/tags/docker/</link>
-    <description>Recent content in Docker on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Wed, 22 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://omarghader.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Configuring Node js on Jenkins using docker</title>
-      <link>https://omarghader.github.io/configuring-node-js-on-jenkins-using-docker/</link>
-      <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://omarghader.github.io/configuring-node-js-on-jenkins-using-docker/</guid>
-      <description>Jenkins is a devops tool for continuous intergration.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on</title><link>https://omarghader.github.io/tags/docker/</link><description>Recent content in Docker on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Wed, 22 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://omarghader.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Configuring Node js on Jenkins using docker</title><link>https://omarghader.github.io/configuring-node-js-on-jenkins-using-docker/</link><pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/configuring-node-js-on-jenkins-using-docker/</guid><description>Jenkins is a devops tool for continuous intergration.
 Install jenkins Requirements for this tutorial : - Docker - Docker compose
 We will user docker compose to configure jenkins docker container:
-version: &#39;3.5&#39; services: jenkins: image: &#39;jenkins/jenkins:lts&#39; container_name: &#39;jenkins&#39; restart: always ports: - &#39;8080:8080&#39; - &#39;50000:50000&#39; volumes: - jenkins-data:/etc/gitlab - /var/run/docker.sock:/var/run/docker.sock volumes: jenkins-data: name: jenkins-data  Then, run the command :
-$ docker-compose up -d  Run Jenkins Once you had run the docker compose file, test that your jenkins is running by opening this url on your browser http://localhost:8080</description>
-    </item>
-    
-    <item>
-      <title>Docker Compose Tutorial</title>
-      <link>https://omarghader.github.io/docker-compose-tutorial/</link>
-      <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://omarghader.github.io/docker-compose-tutorial/</guid>
-      <description>If you are tired of configuring your docker containers every time you want to run it, docker compose is the solution. Docker compose is a tool that will read a configuration file, and will translate it to docker command easily.
+version: &#39;3.5&#39; services: jenkins: image: &#39;jenkins/jenkins:lts&#39; container_name: &#39;jenkins&#39; restart: always ports: - &#39;8080:8080&#39; - &#39;50000:50000&#39; volumes: - jenkins-data:/etc/gitlab - /var/run/docker.sock:/var/run/docker.sock volumes: jenkins-data: name: jenkins-data Then, run the command :
+$ docker-compose up -d Run Jenkins Once you had run the docker compose file, test that your jenkins is running by opening this url on your browser http://localhost:8080</description></item><item><title>Docker Compose Tutorial</title><link>https://omarghader.github.io/docker-compose-tutorial/</link><pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/docker-compose-tutorial/</guid><description>If you are tired of configuring your docker containers every time you want to run it, docker compose is the solution. Docker compose is a tool that will read a configuration file, and will translate it to docker command easily.
 If you like this article, leave a comment and share it with your friends :)
-Install Docker compose $ sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose $ sudo chmod +x /usr/local/bin/docker-compose # Test the installation $ docker-compose --version docker-compose version 1.</description>
-    </item>
-    
-    <item>
-      <title>Docker Tutorial : PhpMyAdmin and MySQL Server</title>
-      <link>https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/</link>
-      <pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/</guid>
-      <description>If you are new to Docker or you are wondering why docker is very popular today, I recommend you to read my previous posts Introduction to Docker.
+Install Docker compose $ sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose $ sudo chmod +x /usr/local/bin/docker-compose # Test the installation $ docker-compose --version docker-compose version 1.</description></item><item><title>Docker Tutorial : PhpMyAdmin and MySQL Server</title><link>https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/</link><pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/</guid><description>If you are new to Docker or you are wondering why docker is very popular today, I recommend you to read my previous posts Introduction to Docker.
 Pull Containers from Docker registry Searching for containers Docker have a public registry where you could find images of dockerized application that are ready to use. All information and indications for using container are specified too.
-In this post, I will show you how to connect PhpMyAdmin container to MySQL server container.</description>
-    </item>
-    
-    <item>
-      <title>Introduction to Docker</title>
-      <link>https://omarghader.github.io/introduction-to-docker/</link>
-      <pubDate>Sun, 23 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://omarghader.github.io/introduction-to-docker/</guid>
-      <description>Docker is a new open-source project that makes deployment of applications easier. The idea of this technology is very simple : &amp;ldquo;the application runs inside a software container. This container is acting like a mini Operating System&amp;rdquo;. Basics are very similar to Virtual machine : An OS is running independently of host&amp;rsquo;s OS. Networking is working using bridges&amp;hellip; Docker is using 2 terms : image and container:
- An image is a packaged application that is not running.</description>
-    </item>
-    
-  </channel>
-</rss>
+In this post, I will show you how to connect PhpMyAdmin container to MySQL server container.</description></item><item><title>Introduction to Docker</title><link>https://omarghader.github.io/introduction-to-docker/</link><pubDate>Sun, 23 Aug 2015 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/introduction-to-docker/</guid><description>Docker is a new open-source project that makes deployment of applications easier. The idea of this technology is very simple : &amp;ldquo;the application runs inside a software container. This container is acting like a mini Operating System&amp;rdquo;. Basics are very similar to Virtual machine : An OS is running independently of host&amp;rsquo;s OS. Networking is working using bridges&amp;hellip; Docker is using 2 terms : image and container:
+An image is a packaged application that is not running.</description></item></channel></rss>
