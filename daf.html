@@ -182,8 +182,9 @@
 
             if (navigator.mediaDevices) {
                 navigator.mediaDevices.getUserMedia(constraints).then(stream => {
-                    window.stream = stream
                     mediaStreamSource = audioCtx.createMediaStreamSource(stream);
+                    mediaStreamSource.resume()
+                    window.stream = mediaStreamSource
                     mediaStreamSource.connect(audioCtx.destination);
                 })
                 .catch(handleError);
