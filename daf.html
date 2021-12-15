@@ -78,6 +78,7 @@
             font-size: 2em;
         }
     </style>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 </head>
 
 <body>
@@ -94,14 +95,17 @@
             <p>5. <b>Adjust the delay</b> and see how it affects your speech</p>
 
             <br />
+            <canvas class="visualizer" width="640" height="100"></canvas> 
+
+            <br/>
 
             <div class="select">
                 <label for="audioSource"><b>Audio input source: </b></label><select id="audioSource"></select>
             </div>
 
-            <!-- <div class="select">
+            <div class="select">
                 <label for="audioOutput"><b>Audio output destination: </b></label><select id="audioOutput"></select>
-            </div> -->
+            </div>
             <br />
 
             <div class="controls">
@@ -125,27 +129,34 @@
         </div>
     </div>
 
-    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <script>
 
         var gain = null;
         var delay = null;
-        var context = null;
+        var analyser = null;
+        var audioCtx = null;
 
         const audioInputSelect = document.querySelector('select#audioSource');
-        // const audioOutputSelect = document.querySelector('select#audioOutput');
-        const selectors = [audioInputSelect];
-        // audioOutputSelect.disabled = !('sinkId' in HTMLMediaElement.prototype);
+        const audioOutputSelect = document.querySelector('select#audioOutput');
+        const selectors = [audioInputSelect, audioOutputSelect];
+        audioOutputSelect.disabled = !('sinkId' in HTMLMediaElement.prototype);
 
         navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError);
 
         audioInputSelect.onchange = function () {
-            if (window.stream) {
-                window.stream.disconnect()
-                window.stream = null
+            const isRunning = !!window.stream
+            if (!isRunning) {
+                return
             }
+
+            // if it was running stop stream
+            window.stream.disconnect()
+            window.stream = null            
             toggle()
         };
+
+        audioOutputSelect.onchange = function(){}
+
 
         init()
 
@@ -171,13 +182,12 @@
 
             if (navigator.mediaDevices) {
                 navigator.mediaDevices.getUserMedia(constraints).then(stream => {
-                    mediaStreamSource = context.createMediaStreamSource(stream);
-                    mediaStreamSource.connect(delay);
+                    mediaStreamSource = audioCtx.createMediaStreamSource(stream);
+                    mediaStreamSource.connect(analyser);
+                    analyser.connect(delay)
                     window.stream = mediaStreamSource
-
-                    return navigator.mediaDevices.enumerateDevices();
                 })
-                    .then(gotDevices).catch(handleError);
+                .catch(handleError);
             } else {
                 console.log("getUserMedia not supported");
             }
@@ -187,7 +197,7 @@
             var delayValue = document.getElementById('delayValue');
             var delayRange = document.getElementById('delayRange');
 
-            delay = context.createDelay(5);
+            delay = audioCtx.createDelay(5);
             delay.connect(gain);
             delay.delayTime.value = .15;
             if (localStorage['delayValue']) {
@@ -212,8 +222,8 @@
             var gainValue = document.getElementById('gainValue');
             var gainRange = document.getElementById('gainRange');
 
-            gain = context.createGain();
-            gain.connect(context.destination);
+            gain = audioCtx.createGain();
+            gain.connect(audioCtx.destination);
             gain.gain.value = 1;
             if (localStorage['gainValue']) {
                 var v = parseFloat(localStorage['gainValue']);
@@ -234,10 +244,60 @@
         function init() {
             window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 
-            context = new AudioContext();
+            audioCtx = new AudioContext();
             initGain()
             initDelay()
+
+            analyser = audioCtx.createAnalyser();
+            analyser.fftSize = 2048;
+
+            var bufferLength = analyser.frequencyBinCount;
+            var dataArray = new Uint8Array(bufferLength);
+            analyser.getByteTimeDomainData(dataArray);
+
+            var canvas = document.querySelector('.visualizer');
+            var canvasCtx = canvas.getContext("2d");
+            
+            function draw() {
+
+                requestAnimationFrame(draw);
+              
+                analyser.getByteTimeDomainData(dataArray);
+              
+                canvasCtx.fillStyle = "rgb(200, 200, 200)";
+                canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+              
+                canvasCtx.lineWidth = 2;
+                canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+              
+                canvasCtx.beginPath();
+              
+                var sliceWidth = canvas.width * 1.0 / bufferLength;
+                var x = 0;
+              
+                for (var i = 0; i < bufferLength; i++) {
+              
+                  var v = dataArray[i] / 128.0;
+                  var y = v * canvas.height / 2;
+              
+                  if (i === 0) {
+                    canvasCtx.moveTo(x, y);
+                  } else {
+                    canvasCtx.lineTo(x, y);
+                  }
+              
+                  x += sliceWidth;
+                }
+              
+                canvasCtx.lineTo(canvas.width, canvas.height / 2);
+                canvasCtx.stroke();
+              }
+              
+            draw();
+            
         }
+
+        
 
         function gotDevices(deviceInfos) {
             // Handles being called several times to update labels. Preserve values.
@@ -255,8 +315,8 @@
                     option.text = deviceInfo.label || `microphone ${audioInputSelect.length + 1}`;
                     audioInputSelect.appendChild(option);
                 } else if (deviceInfo.kind === 'audiooutput') {
-                    // option.text = deviceInfo.label || `speaker ${audioOutputSelect.length + 1}`;
-                    // audioOutputSelect.appendChild(option);
+                    option.text = deviceInfo.label || `speaker ${audioOutputSelect.length + 1}`;
+                    audioOutputSelect.appendChild(option);
                 } else {
                     console.log('Some other kind of source/device: ', deviceInfo);
                 }
@@ -270,8 +330,6 @@
 
         function handleError(error) {
             console.log('navigator.MediaDevices.getUserMedia error: ', error.message, error.name);
-            alert('navigator.MediaDevices.getUserMedia error: ' + error.message + error.name)
-
         }
     </script>
 
