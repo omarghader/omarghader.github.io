@@ -149,7 +149,6 @@
                 return
             }
 
-            console.log('onchange')
             // if it was running stop stream
             window.stream.disconnect()
             window.stream = null            
@@ -183,10 +182,9 @@
 
             if (navigator.mediaDevices) {
                 navigator.mediaDevices.getUserMedia(constraints).then(stream => {
+                    window.stream = stream
                     mediaStreamSource = audioCtx.createMediaStreamSource(stream);
-                    mediaStreamSource.connect(analyser);
-                    analyser.connect(delay)
-                    window.stream = mediaStreamSource
+                    mediaStreamSource.connect(audioCtx.destination);
                 })
                 .catch(handleError);
             } else {
