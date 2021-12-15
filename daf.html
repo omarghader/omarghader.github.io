@@ -181,6 +181,7 @@
             if (navigator.mediaDevices) {
                 navigator.mediaDevices.getUserMedia(constraints).then(stream => {
                     mediaStreamSource = audioCtx.createMediaStreamSource(stream);
+                    audioCtx.resume()
                     window.stream = mediaStreamSource
                     mediaStreamSource.connect(delay);
                 })
@@ -221,7 +222,6 @@
 
             gain = audioCtx.createGain();
             gain.connect(analyser);
-            analyser.connect(audioCtx.destination);
             gain.gain.value = 1;
             if (localStorage['gainValue']) {
                 var v = parseFloat(localStorage['gainValue']);
@@ -246,6 +246,7 @@
             audioCtx.resume()
             
             analyser = audioCtx.createAnalyser();
+            analyser.connect(audioCtx.destination);
             analyser.fftSize = 2048;
 
             var bufferLength = analyser.frequencyBinCount;
