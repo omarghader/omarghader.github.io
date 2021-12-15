@@ -103,9 +103,9 @@
                 <label for="audioSource"><b>Audio input source: </b></label><select id="audioSource"></select>
             </div>
 
-            <div class="select">
+            <!-- <div class="select">
                 <label for="audioOutput"><b>Audio output destination: </b></label><select id="audioOutput"></select>
-            </div>
+            </div> -->
             <br />
 
             <div class="controls">
@@ -124,7 +124,7 @@
 
             <br />
             <br />
-            <note>Uses Web Audio API and WebRTC getUserMedia.<br />Chrome and Firefox only  </note>
+            <note>Uses Web Audio API and WebRTC getUserMedia.<br />Chrome and Firefox only</note>
 
         </div>
     </div>
@@ -137,9 +137,9 @@
         var audioCtx = null;
 
         const audioInputSelect = document.querySelector('select#audioSource');
-        const audioOutputSelect = document.querySelector('select#audioOutput');
-        const selectors = [audioInputSelect, audioOutputSelect];
-        audioOutputSelect.disabled = !('sinkId' in HTMLMediaElement.prototype);
+        // const audioOutputSelect = document.querySelector('select#audioOutput');
+        const selectors = [audioInputSelect];
+        // audioOutputSelect.disabled = !('sinkId' in HTMLMediaElement.prototype);
 
         navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError);
 
@@ -154,9 +154,6 @@
             window.stream = null            
             toggle()
         };
-
-        
-        audioOutputSelect.onchange = function(){}
 
 
         init()
@@ -184,9 +181,8 @@
             if (navigator.mediaDevices) {
                 navigator.mediaDevices.getUserMedia(constraints).then(stream => {
                     mediaStreamSource = audioCtx.createMediaStreamSource(stream);
-                    audioCtx.resume()
                     window.stream = mediaStreamSource
-                    mediaStreamSource.connect(audioCtx.destination);
+                    mediaStreamSource.connect(delay);
                 })
                 .catch(handleError);
             } else {
@@ -224,7 +220,8 @@
             var gainRange = document.getElementById('gainRange');
 
             gain = audioCtx.createGain();
-            gain.connect(audioCtx.destination);
+            gain.connect(analyser);
+            analyser.connect(audioCtx.destination);
             gain.gain.value = 1;
             if (localStorage['gainValue']) {
                 var v = parseFloat(localStorage['gainValue']);
@@ -246,9 +243,8 @@
             window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 
             audioCtx = new AudioContext();
-            initGain()
-            initDelay()
-
+            audioCtx.resume()
+            
             analyser = audioCtx.createAnalyser();
             analyser.fftSize = 2048;
 
@@ -295,6 +291,9 @@
               }
               
             draw();
+
+            initGain()
+            initDelay()
             
         }
 
@@ -315,9 +314,9 @@
                 if (deviceInfo.kind === 'audioinput') {
                     option.text = deviceInfo.label || `microphone ${audioInputSelect.length + 1}`;
                     audioInputSelect.appendChild(option);
-                } else if (deviceInfo.kind === 'audiooutput') {
-                    option.text = deviceInfo.label || `speaker ${audioOutputSelect.length + 1}`;
-                    audioOutputSelect.appendChild(option);
+                //} else if (deviceInfo.kind === 'audiooutput') {
+                //    option.text = deviceInfo.label || `speaker ${audioOutputSelect.length + 1}`;
+                //    audioOutputSelect.appendChild(option);
                 } else {
                     console.log('Some other kind of source/device: ', deviceInfo);
                 }
