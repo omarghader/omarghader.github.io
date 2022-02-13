@@ -1,0 +1,360 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta http-equiv=content-type content="text/html" charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia","headline":"Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia","description":" How to monitor your home temperature with esp32 and xiaomi mijia lywsd03mmc ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2020","datePublished":"2020-10-11T20:57:23+02:00","dateModified":"2020-10-11T20:57:23+02:00","url":"https:\/\/omarghader.github.io\/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome\/","wordCount":"877","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["esphome","esp32","xiaomi mijia","iot","esp32 esphome","esphome projects","esp32 xiaomi","esp32 home assistant","home assistant","ble","lywsd03mmc esphome","esphome lywsd03mmc","lywsd03mmc esp32","esphome tutorial","xiaomi mijia ble esp32","esphome xiaomi temperature","esphome docker","esphome mijia","esphome xiaomi","esphome ble","lywsd03mmc bindkey","xiaomi lywsd03mmc home assistant","esp32_ble_tracker","platform: xiaomi_lywsd03mmc","esphome docker compose","esp32 xiaomi","esphome mac","esp32 esphome","esp32 lywsd03mmc","xiaomi mijia esp32","esphome xiaomi ble","esp32 devkit v1 esphome","esphome ble presence","esphome docker-compose","esphome tool","esphome temperature","docker esphome","esphome bluetooth","esphome bluetooth sensor","esphome logger","esphome projects","esphome humidity","esphome esp32","xiaomi lywsd03mmc","esphome","esp32","xiaomi mijia","iot","esp32 esphome","esphome projects","esp32 xiaomi","esp32 home assistant","home assistant","ble","lywsd03mmc esphome","esphome lywsd03mmc","lywsd03mmc esp32","esphome tutorial","xiaomi mijia ble esp32","esphome xiaomi temperature","esphome docker","esphome mijia","esphome xiaomi","esphome ble","lywsd03mmc bindkey","xiaomi lywsd03mmc home assistant","esp32_ble_tracker","platform: xiaomi_lywsd03mmc","esphome docker compose","esp32 xiaomi","esphome mac","esp32 esphome","esp32 lywsd03mmc","xiaomi mijia esp32","esphome xiaomi ble","esp32 devkit v1 esphome","esphome ble presence","esphome docker-compose","esphome tool","esphome temperature","docker esphome","esphome bluetooth","esphome bluetooth sensor","esphome logger","esphome projects","esphome humidity","esphome esp32","xiaomi lywsd03mmc","Blog"]}</script>
+<title>Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia &#183; </title>
+<meta name=HandheldFriendly content="True">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href=https://omarghader.github.io/favicon.ico>
+<link rel=canonical href=https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/>
+<meta name=description content="How to monitor your home temperature with esp32 and xiaomi mijia lywsd03mmc">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://omarghader.github.io/img/xiaomi-lywsd03mmc.jpeg">
+<meta name=twitter:title content="Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia">
+<meta name=twitter:description content="How to monitor your home temperature with esp32 and xiaomi mijia lywsd03mmc">
+<meta name=twitter:url content="https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/">
+<meta name=twitter:site content="@">
+<meta property="og:site_name" content>
+<meta property="og:title" content="Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia &#183; Omar Ghaders Blog">
+<meta property="og:url" content="https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/">
+<meta property="og:type" content="article">
+<meta property="og:description" content="How to monitor your home temperature with esp32 and xiaomi mijia lywsd03mmc">
+<meta property="article:published_time" content="2020-10-11T20:57:23+02:00">
+<meta property="article:tag" content="esphome"><meta property="article:tag" content="esp32"><meta property="article:tag" content="xiaomi mijia"><meta property="article:tag" content="iot"><meta property="article:tag" content="esp32 esphome"><meta property="article:tag" content="esphome projects"><meta property="article:tag" content="esp32 xiaomi"><meta property="article:tag" content="esp32 home assistant"><meta property="article:tag" content="home assistant"><meta property="article:tag" content="ble"><meta property="article:tag" content="lywsd03mmc esphome"><meta property="article:tag" content="esphome lywsd03mmc"><meta property="article:tag" content="lywsd03mmc esp32"><meta property="article:tag" content="esphome tutorial"><meta property="article:tag" content="xiaomi mijia ble esp32"><meta property="article:tag" content="esphome xiaomi temperature"><meta property="article:tag" content="esphome docker"><meta property="article:tag" content="esphome mijia"><meta property="article:tag" content="esphome xiaomi"><meta property="article:tag" content="esphome ble"><meta property="article:tag" content="lywsd03mmc bindkey"><meta property="article:tag" content="xiaomi lywsd03mmc home assistant"><meta property="article:tag" content="esp32_ble_tracker"><meta property="article:tag" content="platform: xiaomi_lywsd03mmc"><meta property="article:tag" content="esphome docker compose"><meta property="article:tag" content="esp32 xiaomi"><meta property="article:tag" content="esphome mac"><meta property="article:tag" content="esp32 esphome"><meta property="article:tag" content="esp32 lywsd03mmc"><meta property="article:tag" content="xiaomi mijia esp32"><meta property="article:tag" content="esphome xiaomi ble"><meta property="article:tag" content="esp32 devkit v1 esphome"><meta property="article:tag" content="esphome ble presence"><meta property="article:tag" content="esphome docker-compose"><meta property="article:tag" content="esphome tool"><meta property="article:tag" content="esphome temperature"><meta property="article:tag" content="docker esphome"><meta property="article:tag" content="esphome bluetooth"><meta property="article:tag" content="esphome bluetooth sensor"><meta property="article:tag" content="esphome logger"><meta property="article:tag" content="esphome projects"><meta property="article:tag" content="esphome humidity"><meta property="article:tag" content="esphome esp32"><meta property="article:tag" content="xiaomi lywsd03mmc">
+<meta property="og:image" content="https://omarghader.github.io/img/xiaomi-lywsd03mmc.jpeg">
+<meta name=generator content="Hugo 0.92.2">
+<link rel=stylesheet type=text/css href=https://omarghader.github.io/built/screen.css>
+<link rel=stylesheet type=text/css href=https://omarghader.github.io/css/casper-two.css>
+<link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css>
+<link rel=stylesheet href=https://omarghader.github.io/css/custom.css>
+</head>
+<body class=post-template>
+<div class=site-wrapper>
+<header class="site-header outer">
+<div class=inner>
+<nav class=site-nav>
+<div class=site-nav-left>
+<a class=site-nav-logo href=#><img src=https://omarghader.github.io/img/logo.png alt="Omar Ghaders Blog"></a>
+<ul class=nav role=menu>
+<li role=menuitem>
+<a href=https://omarghader.github.io/>Home</a>
+</li>
+<li role=menuitem>
+<a href=https://omarghader.github.io/post>Posts</a>
+</li>
+<li role=menuitem>
+<a href=https://omarghader.github.io/about>About</a>
+</li>
+</ul></div>
+<div class=site-nav-right>
+<div class=social-links>
+<a class=social-link href=https://github.com/omarghader target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63.0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577.0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93.0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176.0.0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22.0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22.0 1.606-.015 2.896-.015 3.286.0.315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<main id=site-main class="site-main outer" role=main>
+<div class=inner>
+<article class="post-full post">
+<header class=post-full-header>
+<section class=post-full-meta>
+<time class=post-full-meta-date datetime=2020-10-11>11 October 2020</time>
+<span class=date-divider>/</span> <a href=https://omarghader.github.io/tags/esphome/>#esphome</a>&nbsp;<a href=https://omarghader.github.io/tags/esp32/>#esp32</a>&nbsp;
+</section>
+<h1 class=post-full-title>Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia</h1>
+</header>
+<figure class=post-full-image style=background-image:url(https://omarghader.github.io/img/xiaomi-lywsd03mmc.jpeg)>
+</figure>
+<section class=post-full-content>
+<div class=kg-card-markdown>
+<p>We live in a world where everything is connected. One day, I wanted to know the temperature of my house when I&rsquo;m outside to check if the heating regulator is working or not. Already having a bluetooth Xiaomi Mijia lywsd03mmc thermometer, I was looking for something cheap and tiny to do connect to the thermometer and do the job.</p>
+<p>I did some research and found a chip called <code>ESP32</code>. This chip has integrated bluetooth and WIFI. It is very tiny (3cmx6cm). Also, very easy to program using some known tools like arduino or esphome. Therefore, I decided to give this a try and I bought it for 4$.</p>
+<h2 id=requirements>Requirements</h2>
+<p><em>Amazon</em>:</p>
+<ul>
+<li>ESP32-DevKitC board: <a href=https://shorturl.servebeer.com/n/esp32>Buy here from amazon</a></li>
+<li>Xiaomi Mijia Thermoemter v2: <a href=https://shorturl.servebeer.com/n/mijia-bluetooth-thermometer>Buy here from amazon</a></li>
+</ul>
+<p><em>Aliexpress</em>:</p>
+<ul>
+<li>ESP32-DevKitC board : <a href=https://s.click.aliexpress.com/e/_ADRskV>Buy here from aliexpress</a></li>
+<li>Xiaomi Mijia Thermoemter v2 with battery : <a href=https://s.click.aliexpress.com/e/_ADiMxF>Buy here from aliexpress</a></li>
+</ul>
+<blockquote>
+<p><strong>If you find any problem during this tutorial</strong>: Please leave a commment and I will reply very soon!</p>
+</blockquote>
+<iframe src="https://www.youtube.com/embed/oOHp2o_-eNQ?start=" style=position:absolute;top:0;left:0;width:560;height:315 allowfullscreen frameborder=0 title="YouTube Video"></iframe>
+<h2 id=esphome-introduction>ESPhome introduction</h2>
+<p>I am not a big fan of hardware programming and flashing&mldr; So I&rsquo;ve looked for existing tools that configure easily ESP32 to connect to the Xiaomi mijia. <a href=https://esphome.io/>ESPhome</a> was one the easiest tool because it requires no code, but only configuration is need. ESPhome is a tool, with a set of predefined modules and configuration, that can generate the wanted code for esp32 chip. Example:</p>
+<ul>
+<li>Connect to a Xiaomi BLE thermometer</li>
+<li>Measure the temperature using DHT sensor</li>
+<li>Detect the presence of BLE tag</li>
+<li>Turn on/off light</li>
+</ul>
+<p>In addition, ESPhome can easily add a webserver to ESP32, configure wifi, update the code Over-The-Air (OTA).</p>
+<h2 id=esphome-configuration>ESPhome configuration</h2>
+<p>Let&rsquo;s create the configuration for connecting ESP32 to the Xiaomi Mijia lywsd03mmc. ESPhome is based on yaml configuration. <code>livingroom.yaml</code> file:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>esphome</span>:
+  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>livingroom</span>
+  <span style=color:#f92672>platform</span>: <span style=color:#ae81ff>ESP32</span>
+  <span style=color:#f92672>board</span>: <span style=color:#ae81ff>esp32doit-devkit-v1</span>
+
+<span style=color:#f92672>wifi</span>:
+  <span style=color:#f92672>ssid</span>: <span style=color:#e6db74>&#34;MyWifiName&#34;</span>
+  <span style=color:#f92672>password</span>: <span style=color:#e6db74>&#34;MyWifiPassword&#34;</span>
+  <span style=color:#75715e># specify address ip to use</span>
+  <span style=color:#f92672>use_address</span>: <span style=color:#e6db74>&#34;192.168.1.20&#34;</span>
+
+<span style=color:#75715e># Enable logging</span>
+<span style=color:#f92672>logger</span>:
+
+<span style=color:#75715e># Enable Home Assistant API</span>
+<span style=color:#f92672>api</span>:
+
+<span style=color:#75715e># Add webserver on port 80</span>
+<span style=color:#f92672>web_server</span>:
+  <span style=color:#f92672>port</span>: <span style=color:#ae81ff>80</span>
+
+<span style=color:#75715e># Enable update Over-The-Air</span>
+<span style=color:#f92672>ota</span>:
+
+<span style=color:#75715e># Enable Bluetooth scanning for this ESP32</span>
+<span style=color:#f92672>esp32_ble_tracker</span>:
+
+<span style=color:#f92672>sensor</span>:
+  - <span style=color:#f92672>platform</span>: <span style=color:#ae81ff>xiaomi_lywsd03mmc</span>
+    <span style=color:#f92672>mac_address</span>: <span style=color:#ae81ff>XX:XX:XX:XX:XX:XX</span>
+    <span style=color:#f92672>bindkey</span>: <span style=color:#e6db74>&#34;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#34;</span>
+    <span style=color:#f92672>temperature</span>:
+      <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#34;LYWSD03MMC Temperature&#34;</span>
+    <span style=color:#f92672>humidity</span>:
+      <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#34;LYWSD03MMC Humidity&#34;</span>
+    <span style=color:#f92672>battery_level</span>:
+      <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#34;LYWSD03MMC Battery Level&#34;</span>
+
+<span style=color:#75715e># Show the status of ESP32</span>
+<span style=color:#f92672>binary_sensor</span>:
+  - <span style=color:#f92672>platform</span>: <span style=color:#ae81ff>status</span>
+    <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#34;Living Room Status&#34;</span>
+</code></pre></div><p>If you read at the configuration above, you can notice how basic and clear it is. Only 2 fields are to be defined : <code>mac_address</code> and <a href=https://esphome.io/components/sensor/xiaomi_ble.html#lywsd03mmc>bindkey</a> of the <code>xiaomi_lywsd03mmc</code>.</p>
+<h2 id=find-xiaomi-mijia-information>Find Xiaomi Mijia information</h2>
+<p>In order to connect to the thermomter, we should provide its bluetooth mac address. But, the Xiaomi <code>LYWSD03MMC</code> send crypted data, using a <code>bindkey</code> that we should provide too.</p>
+<p><img src=https://omarghader.github.io/img/xiaomi-lywsd03mmc.jpeg alt="Xiaomi Mijia LYWSD03MMC"></p>
+<h3 id=finding-mac-address>Finding Mac Address</h3>
+<p>Find the MAC address using the <code>bluetoothctl</code> command:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>omar@mypc ~ $ bluetoothctl scan on
+Discovery started
+...
+<span style=color:#f92672>[</span>NEW<span style=color:#f92672>]</span> Device XX:XX:XX:XX:XX:XX LYWSD03MMC
+....
+</code></pre></div><h3 id=find-the-bindkey>Find the bindkey</h3>
+<p>There is many ways to get a bindkey.</p>
+<ul>
+<li>The first one is to follow the <a href=https://esphome.io/components/sensor/xiaomi_ble.html#obtaining-the-bindkey>ESPhome instruction</a>. (I had some problems with Android 11 and didn&rsquo;t work)</li>
+<li>Use a tool that I used and worked perfectly:
+<ul>
+<li>On your <code>mobile</code>, go to <a href=https://atc1441.github.io/TelinkFlasher.html>https://atc1441.github.io/TelinkFlasher.html</a></li>
+<li>Enable bluetooth</li>
+<li>Click on <code>connect</code> at the top of page</li>
+<li>A list of bluetooth nearby devices will apear, click on your LYWSD03MMC device</li>
+<li>Once connected, click on <code>Do Activation</code></li>
+<li>Wait few seconds, and then you should see <code>Mi Token</code> and <code>Mi Bind Key</code> filled.</li>
+</ul>
+</li>
+</ul>
+<p>Now go back to the yaml configuration and fill the <code>mac_address</code> and <code>bindkey</code>.</p>
+<blockquote>
+<p>If you like this tutorial, please give me support by subscribing to my Youtube channel <a href=https://www.youtube.com/channel/UCrBkxDt5fRLErQwhefINuaA>my youtube channel</a></p>
+</blockquote>
+<h2 id=flash-the-esp32-with-the-configuration-above>Flash the ESP32 with the configuration above</h2>
+<h3 id=run-esphome-using-docker>Run ESPhome using docker</h3>
+<p>Now that we have a correct configuration, let&rsquo;s flash the ESP32. Connect the chip to your computer using USB cable. I&rsquo;ve used ESPhome using docker compose.
+Create a directory for your project. In this directory, add the following docker-compose.yaml file. Also create a directory called <code>config</code> inside it.</p>
+<p>In this <code>config</code> directory add the <code>livingroom.yaml</code> that we have defined before.</p>
+<p>The files tree should look like this.</p>
+<pre tabindex=0><code>| myproject
+| -- docker-compose.yaml
+| -- config
+| |-- livingroom.yaml
+</code></pre><p>Here is the docker-compose.yaml file.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#75715e># docker-compose.yaml file</span>
+<span style=color:#f92672>version</span>: <span style=color:#e6db74>&#39;3.5&#39;</span>
+
+<span style=color:#f92672>services</span>:
+    <span style=color:#f92672>esphome</span>:
+        <span style=color:#f92672>image</span>: <span style=color:#ae81ff>esphome/esphome</span>
+        <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>esphome</span>
+        <span style=color:#f92672>ports</span>:
+            - <span style=color:#ae81ff>6052</span>:<span style=color:#ae81ff>6052</span>
+        <span style=color:#f92672>volumes</span>:
+            <span style=color:#75715e># HERE we will add the livingroom.yaml</span>
+            - <span style=color:#ae81ff>./config:/config</span>
+        <span style=color:#f92672>network_mode</span>: <span style=color:#ae81ff>host</span>
+        <span style=color:#75715e># Important to flash using USB</span>
+        <span style=color:#f92672>devices</span>:
+            - <span style=color:#ae81ff>/dev/ttyUSB0:/dev/ttyUSB0</span>
+</code></pre></div><p>Run the ESPhome using the command <code>docker-compose up -d</code></p>
+<h3 id=flash-the-configuration>Flash the configuration</h3>
+<p>Now that your ESPHome is running, go to <a href=http://localhost:6052>http://localhost:6052</a>. You should see an interface with <code>livingroom</code> item appearing.
+<img src=https://omarghader.github.io/img/esphome-interface.jpg alt="esphome interface"></p>
+<p>On the top right, click on the select menu and choose <code>USB</code> for the first flash.
+Then, click on <code>Validate</code> to check that your structure is ok and <code>Upload</code> to run the flash.
+<img src=https://omarghader.github.io/img/esphome-flash.jpg alt="esphome flash screenshot"></p>
+<p>If all is successful, you will see a log that looks like the photo above.
+You can read the logs and wait until you see that humidity and temperature.
+<img src=https://omarghader.github.io/img/esphome-log.jpg alt="esphome log screenshot"></p>
+<p>Otherwise, go to <a href=http://livingroom.local/>http://livingroom.local/</a> to see a webpage with the requested information.</p>
+<p><img src=https://omarghader.github.io/img/esphome-webserver.jpg alt="esphome webserver screenshot"></p>
+<h2 id=update-home-asssistant-integration>UPDATE Home asssistant integration</h2>
+<p>I have wrote a new article on <a href=https://omarghader.github.io/how-to-connect-esp32-esphome-to-home-assistant/>how to install home assistant and how to configure it</a></p>
+<h2 id=conclusion>Conclusion</h2>
+<p>If this tutorial was helpful, please leave a comment and tell me your opinion.
+In the next tutorial I will show you how to access the temperature data when you are outdoor.</p>
+<p>I wish you good luck with ESP32!</p>
+</div>
+<script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
+<ins class=adsbygoogle style=display:block;text-align:center data-ad-layout=in-article data-ad-format=auto data-full-width-responsive=true data-ad-client=ca-pub-2980078129213070 data-ad-slot=1658997746></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
+</section>
+<footer class=post-full-footer>
+<section class=author-card>
+<img class=author-profile-image src=https://omarghader.github.io/img/me/omar.jpg alt=Author>
+<section class=author-card-content>
+<h4 class=author-card-name><a href=https://omarghader.github.io/>Omar Ghader</a></h4>
+<p>Fullstack web engineer and devops. Mobile web specialist</p>
+</section>
+</section>
+</footer>
+</article>
+<div id=disqus_thread></div>
+<script>var disqus_config=function(){this.page.url="https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/",this.page.identifier="https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/"};(function(){var a=document,b=a.createElement('script');b.src='https://omarghader.disqus.com/embed.js',b.setAttribute('data-timestamp',+new Date),(a.head||a.body).appendChild(b)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+</div>
+</main>
+<aside class="read-next outer">
+<div class=inner>
+<div class=read-next-feed>
+<article class=read-next-card style=background-image:url(https://omarghader.github.io/img/blog-cover.jpg)>
+<header class=read-next-card-header>
+<small class=read-next-card-header-sitetitle>&mdash; Omar Ghaders Blog &mdash;</small>
+<h3 class=read-next-card-header-title><a href=https://omarghader.github.io/tags/esphome/>#esphome</a></h3>
+</header>
+<div class=read-next-divider><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+<div class=read-next-card-content>
+<ul>
+<li><a href=https://omarghader.github.io/how-to-turn-off-light-automatically/>How to turn off the light automatically when you go out using esp32</a></li>
+<li><a href=https://omarghader.github.io/docker-compose-nginx-tutorial/>Docker Compose Nginx Tutorial</a></li>
+<li><a href=https://omarghader.github.io/esp32-cam-tutorial/>ESP32 cam tutorial: Setup 5$ live streaming camera for you house with esphome</a></li>
+<li><a href=https://omarghader.github.io/my-first-post/>My First Post</a></li>
+</ul>
+</div>
+<footer class=read-next-card-footer>
+<a href=https://omarghader.github.io/tags/esphome/>See all related posts →</a>
+</footer>
+</article>
+<article class="post-card post">
+<a class=post-card-image-link href=https://omarghader.github.io/how-to-connect-esp32-esphome-to-home-assistant/>
+<div class=post-card-image style=background-image:url(https://omarghader.github.io/img/home_assistant_logo.svg)></div>
+</a>
+<div class=post-card-content>
+<a class=post-card-content-link href=https://omarghader.github.io/how-to-connect-esp32-esphome-to-home-assistant/>
+<header class=post-card-header>
+<span class=post-card-tags>
+#esphome
+#esp32
+#xiaomi mijia
+#iot
+#esp32 esphome
+#esphome projects
+#esp32 xiaomi
+#esp32 home assistant
+#home assistant
+#ble
+#esp32 home asistant
+#esphome home assistant configuration
+#home assistant docker
+#hass </span>
+<h2 class=post-card-title>How to connect ESP32 to home assistant in 5 minutes</h2>
+</header>
+<section class=post-card-excerpt>
+<p>a tutorial to connect esp32 esphome to home assistant using esphome and create an automation example when temperature is low than 21 degrees</p>
+</section>
+</a>
+<footer class=post-card-meta>
+<img class=author-profile-image src=https://omarghader.github.io/img/me/omar.jpg alt=Author>
+<span class=post-card-author><a href=https://omarghader.github.io/>Omar Ghader</a></span>
+</footer>
+</div>
+</article>
+<article class="post-card post">
+<a class=post-card-image-link href=https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/>
+<div class=post-card-image style=background-image:url(https://omarghader.github.io/defimg/7.jpg)></div>
+</a>
+<div class=post-card-content>
+<a class=post-card-content-link href=https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/>
+<header class=post-card-header>
+<span class=post-card-tags>
+#html
+#web
+#bottom </span>
+<h2 class=post-card-title>Align div to the bottom of the page in 3 steps</h2>
+</header>
+<section class=post-card-excerpt>
+<p>How to align div to bottom of the page? In this tutorial you will see how to use set div to the bottom of the page</p>
+</section>
+</a>
+<footer class=post-card-meta>
+<img class=author-profile-image src=https://omarghader.github.io/img/me/omar.jpg alt=Author>
+<span class=post-card-author><a href=https://omarghader.github.io/>Omar Ghader</a></span>
+</footer>
+</div>
+</article>
+</div>
+</div>
+</aside>
+<div class=floating-header>
+<div class=floating-header-logo>
+<a href=https://omarghader.github.io/>
+<img src=https://omarghader.github.io/img/logo.png alt>
+<span></span>
+</a>
+</div>
+<span class=floating-header-divider>&mdash;</span>
+<div class=floating-header-title>Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia</div>
+<div class=floating-header-share>
+<div class=floating-header-share-label>Share this<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 15.5V4a1.5 1.5.0 113 0v4.5h2a1 1 0 011 1h2a1 1 0 011 1H18a1.5 1.5.0 011.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2.0 011.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
+</div>
+<a class=floating-header-share-tw href="https://twitter.com/share?text=Esphome%20Tutorial%3a%20for%204%24%20monitor%20your%20home%20temperature%20with%20esp32%20and%20xiaomi%20mijia&url=https%3a%2f%2fomarghader.github.io%2fhow-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome%2f" onclick="return window.open(this.href,'share-twitter','width=550,height=235'),!1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088.0 01-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015.0 01-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25.0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688.0 5.063-.875 7.188-2.5-1.25.0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5.0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673.0 01-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228.0 01-1.875-2c-.5-.875-.688-1.813-.688-2.75.0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579.0 011.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48.0 003.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+<a class=floating-header-share-fb href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fomarghader.github.io%2fhow-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome%2f" onclick="return window.open(this.href,'share-facebook','width=580,height=296'),!1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86.0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+</div>
+<progress class=progress value=0>
+<div class=progress-container>
+<span class=progress-bar></span>
+</div>
+</progress>
+</div>
+<footer class="site-footer outer">
+<div class="site-footer-content inner">
+<section class=copyright style=line-height:1.3em>
+<a href=https://omarghader.github.io/>omarghader</a> <br>
+</section>
+<nav class=site-footer-nav>
+<a href=https://omarghader.github.io/>Latest Posts</a>
+<a href=https://github.com/omarghader target=_blank rel=noopener>Github</a>
+</nav>
+</div>
+</footer>
+</div>
+<script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script>
+<script type=text/javascript src=//code.jquery.com/jquery-3.2.1.min.js></script>
+<script type=text/javascript src=https://omarghader.github.io/js/jquery.fitvids.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script>var _gaq=[['_setAccount','UA-66637295-1'],['_trackPageview']];(function(a,b){var c=a.createElement(b),d=a.getElementsByTagName(b)[0];c.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js',d.parentNode.insertBefore(c,d)})(document,'script')</script>
+<script>$(document).ready(function(){var j=$(".post-full-content"),g,d,e,b,f,c,a;j.fitVids(),g=document.querySelector('progress'),d=document.querySelector('.floating-header'),e=document.querySelector('.post-full-title'),b=window.scrollY,f=window.innerHeight,c=$(document).height(),a=!1;function k(){b=window.scrollY,h()}function l(){f=window.innerHeight,c=$(document).height(),h()}function h(){a||requestAnimationFrame(i),a=!0}function i(){var h=e.getBoundingClientRect().top+window.scrollY,i=e.offsetHeight+35,j=c-f;b>=h+i?d.classList.add('floating-active'):d.classList.remove('floating-active'),g.setAttribute('max',j),g.setAttribute('value',b),a=!1}window.addEventListener('scroll',k,{passive:!0}),window.addEventListener('resize',l,!1),i()})</script>
+</body></html>
