@@ -88,12 +88,12 @@
 <h2 id=finding-the-mi-band-mac-adress>Finding the Mi band MAC adress</h2>
 <p>if you know already your band bluetooth MAC adress, you can skip this part.</p>
 <p>In your terminal run the command and find the name of your band in the output:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ sudo hcitool lescan 
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ sudo hcitool lescan
 Or
 $ sudo hcitool lescan | grep Band
 </code></pre></div><p><code>lescan</code> means : low energy scan</p>
 <h2 id=esphome-configuration>ESPhome configuration</h2>
-<p>If you are not familiar with esphome [check this artible](/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/.</p>
+<p>If you are not familiar with esphome [check this article](/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/.</p>
 <p>Run ESPhome on your computer, and prepare the esp32 configuration:</p>
 <ul>
 <li>Create a config file <code>smartwatch.yaml</code> under config directory.</li>
@@ -101,7 +101,7 @@ $ sudo hcitool lescan | grep Band
 </ul>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>substitutions</span>:
   <span style=color:#75715e># Modify variables based on your settings</span>
-  <span style=color:#f92672>hostname</span>: <span style=color:#e6db74>&#39;livingroom&#39;</span>
+  <span style=color:#f92672>hostname</span>: <span style=color:#e6db74>&#34;livingroom&#34;</span>
 
 <span style=color:#f92672>esphome</span>:
   <span style=color:#f92672>name</span>: <span style=color:#ae81ff>$hostname</span>
@@ -109,7 +109,7 @@ $ sudo hcitool lescan | grep Band
   <span style=color:#f92672>board</span>: <span style=color:#ae81ff>esp32dev</span>
 <span style=color:#f92672>wifi</span>:
   <span style=color:#f92672>ssid</span>: <span style=color:#ae81ff>wifi_ssid</span>
-  <span style=color:#f92672>password</span>:  <span style=color:#ae81ff>wifi_password</span>
+  <span style=color:#f92672>password</span>: <span style=color:#ae81ff>wifi_password</span>
   <span style=color:#f92672>fast_connect</span>: <span style=color:#66d9ef>True</span>
 
 <span style=color:#75715e># Enable logging</span>
@@ -230,8 +230,8 @@ Now you can flush your esp32 with the configuration above.</p>
 </ul>
 <blockquote>
 <p>If you like this tutorial, please give me support by subscribing to my Youtube channel <a href=https://www.youtube.com/channel/UCrBkxDt5fRLErQwhefINuaA>my youtube channel</a></p>
-</blockquote>
 <p>I hope this article was useful, please write a comment if you succeed and share it with your friends!</p>
+</blockquote>
 <p><img src=https://omarghader.github.io/img/homeassistant-bulb1.jpg alt="Home assistant automation create">
 <img src=https://omarghader.github.io/img/homeassistant-bulb2.jpg alt="Home assistant automation create 2"></p>
 </div>
@@ -266,9 +266,9 @@ Now you can flush your esp32 with the configuration above.</p>
 </div>
 <div class=read-next-card-content>
 <ul>
-<li><a href=https://omarghader.github.io/haproxy-letsencrypt-docker-certbot-certificates/>HAProxy LetsEncrypt Docker Tutorial: Create and Renew HTTPs Certificates for free</a></li>
-<li><a href=https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/>Docker Tutorial : PhpMyAdmin and MySQL Server</a></li>
-<li><a href=https://omarghader.github.io/docker-compose-nginx-tutorial/>Docker Compose Nginx Tutorial</a></li>
+<li><a href=https://omarghader.github.io/my-first-post/>My First Post</a></li>
+<li><a href=https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/>Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia</a></li>
+<li><a href=https://omarghader.github.io/jenkins-nodejs-configuration/>Configuring Node js on Jenkins using docker</a></li>
 <li><a href=https://omarghader.github.io/introduction-to-docker/>Introduction to Docker</a></li>
 </ul>
 </div>

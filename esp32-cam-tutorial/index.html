@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv=content-type content="text/html" charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"ESP32 cam tutorial: Setup 5$ live streaming camera for you house with esphome","headline":"ESP32 cam tutorial: Setup 5$ live streaming camera for you house with esphome","description":" Setup and configure an esp32 cam with esphome to get a live streaming camera for your house for only 5$. ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2021","datePublished":"2021-01-02T20:57:23+02:00","dateModified":"2021-01-02T20:57:23+02:00","url":"https:\/\/omarghader.github.io\/esp32-cam-tutorial\/","wordCount":"569","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["esphome","esp32","esp32 cam","iot","esp32 cam esphome","esphome projects","esp32 cam home assistant","home assistant","esphome","esp32","esp32 cam","iot","esp32 cam esphome","esphome projects","esp32 cam home assistant","home assistant","Blog"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"ESP32 cam tutorial: Setup 5$ live streaming camera for you house with esphome","headline":"ESP32 cam tutorial: Setup 5$ live streaming camera for you house with esphome","description":" Setup and configure an esp32 cam with esphome to get a live streaming camera for your house for only 5$. ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2021","datePublished":"2021-01-02T20:57:23+02:00","dateModified":"2021-01-02T20:57:23+02:00","url":"https:\/\/omarghader.github.io\/esp32-cam-tutorial\/","wordCount":"567","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["esphome","esp32","esp32 cam","iot","esp32 cam esphome","esphome projects","esp32 cam home assistant","home assistant","esphome","esp32","esp32 cam","iot","esp32 cam esphome","esphome projects","esp32 cam home assistant","home assistant","Blog"]}</script>
 <title>ESP32 cam tutorial: Setup 5$ live streaming camera for you house with esphome &#183; </title>
 <meta name=HandheldFriendly content="True">
 <meta name=viewport content="width=device-width,initial-scale=1">
@@ -87,8 +87,8 @@
 <p><strong>If you find any problem during this tutorial</strong>: Please leave a commment and I will reply very soon!</p>
 </blockquote>
 <blockquote>
-</blockquote>
 <iframe src="https://www.youtube.com/embed/akqQ9PIgsaU?start=" style=position:absolute;top:0;left:0;width:560;height:315 allowfullscreen frameborder=0 title="YouTube Video"></iframe>
+</blockquote>
 <h2 id=wiring-the-components>Wiring the components</h2>
 <p>Notice that esp32 cam has multiple pins. You need only 4 pins for flashing the configuration and only 2 pins to feed it with power.</p>
 <p>Wire FTDI to esp32 cam as following:</p>
@@ -117,13 +117,13 @@
 <td style=text-align:center>U0R</td>
 </tr>
 <tr>
-<td style=text-align:center></td>
-<td style=text-align:center><strong>100 to the GNG (essential for flashing)</strong></td>
+<td style=text-align:center><strong>100</strong></td>
+<td style=text-align:center><strong>GND (essential for flashing)</strong></td>
 </tr>
 </tbody>
 </table>
 <h2 id=esphome-configuration>ESPhome configuration</h2>
-<p>If you are not familiar with esphome [check this artible](/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/.</p>
+<p>If you are not familiar with esphome [check this article](/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/.</p>
 <p>Run ESPhome on your computer, then prepare the esp32 cam configuration:</p>
 <ul>
 <li>Create a config file <code>camera.yaml</code> under config directory.</li>
@@ -131,7 +131,7 @@
 </ul>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>substitutions</span>:
   <span style=color:#75715e># Modify variables based on your settings</span>
-  <span style=color:#f92672>hostname</span>: <span style=color:#e6db74>&#39;ocamera&#39;</span>
+  <span style=color:#f92672>hostname</span>: <span style=color:#e6db74>&#34;ocamera&#34;</span>
 
 <span style=color:#f92672>esphome</span>:
   <span style=color:#f92672>name</span>: <span style=color:#ae81ff>$hostname</span>
@@ -139,7 +139,7 @@
   <span style=color:#f92672>board</span>: <span style=color:#ae81ff>esp32dev</span>
 <span style=color:#f92672>wifi</span>:
   <span style=color:#f92672>ssid</span>: <span style=color:#ae81ff>wifi_ssid</span>
-  <span style=color:#f92672>password</span>:  <span style=color:#ae81ff>wifi_password</span>
+  <span style=color:#f92672>password</span>: <span style=color:#ae81ff>wifi_password</span>
   <span style=color:#f92672>fast_connect</span>: <span style=color:#66d9ef>True</span>
 
 <span style=color:#75715e># Enable logging</span>
@@ -157,7 +157,6 @@
 <span style=color:#f92672>time</span>:
   - <span style=color:#f92672>platform</span>: <span style=color:#ae81ff>homeassistant</span>
     <span style=color:#f92672>id</span>: <span style=color:#ae81ff>homeassistant_time</span>
-
 
 <span style=color:#75715e># ESP32-CAM</span>
 <span style=color:#f92672>esp32_camera</span>:
@@ -257,10 +256,10 @@ If you want to play a live stream, just click on it and enjoy free live stream.<
 </div>
 <div class=read-next-card-content>
 <ul>
-<li><a href=https://omarghader.github.io/srcset-tutorial-responsive-image-html/>Srcset Tutorial : Responsive Image HTML</a></li>
-<li><a href=https://omarghader.github.io/my-first-post/>My First Post</a></li>
-<li><a href=https://omarghader.github.io/how-to-center-a-element-inside-div-with-css/>How to center a element inside div with css</a></li>
 <li><a href=https://omarghader.github.io/monitor-your-applications-easily-with-grafana-and-prometheus/>Monitor your applications easily with Grafana and Prometheus</a></li>
+<li><a href=https://omarghader.github.io/docker-compose-tutorial/>Docker Compose Tutorial</a></li>
+<li><a href=https://omarghader.github.io/docker-compose-nginx-tutorial/>Docker Compose Nginx Tutorial</a></li>
+<li><a href=https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/>Align div to the bottom of the page in 3 steps</a></li>
 </ul>
 </div>
 <footer class=read-next-card-footer>
@@ -303,7 +302,7 @@ If you want to play a live stream, just click on it and enjoy free live stream.<
 </article>
 <article class="post-card post">
 <a class=post-card-image-link href=https://omarghader.github.io/haproxy-letsencrypt-docker-certbot-certificates/>
-<div class=post-card-image style=background-image:url(https://omarghader.github.io/defimg/6.jpg)></div>
+<div class=post-card-image style=background-image:url(https://omarghader.github.io/defimg/7.jpg)></div>
 </a>
 <div class=post-card-content>
 <a class=post-card-content-link href=https://omarghader.github.io/haproxy-letsencrypt-docker-certbot-certificates/>
