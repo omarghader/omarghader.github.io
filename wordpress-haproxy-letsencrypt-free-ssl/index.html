@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv=content-type content="text/html" charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"DIY 5$: deploy Wordpress \u002b free SSL with letsencrypt and haproxy","headline":"DIY 5$: deploy Wordpress \u002b free SSL with letsencrypt and haproxy","description":" Deplpy wordpress and add ssl certificates for free to increase the security using letsencrypt and certbot tool ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2021","datePublished":"2021-04-04T22:17:23+02:00","dateModified":"2021-04-04T22:17:23+02:00","url":"https:\/\/omarghader.github.io\/wordpress-haproxy-letsencrypt-free-ssl\/","wordCount":"1461","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["wordpress","woocommerce","haproxy","docker","letsencrypt","certificate","https certificate","haproxy letsencrypt docker","certbot","nginx","wordpress","woocommerce","haproxy","docker","letsencrypt","certificate","https certificate","haproxy letsencrypt docker","certbot","nginx","Blog"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"DIY 5$: deploy Wordpress \u002b free SSL with letsencrypt and haproxy","headline":"DIY 5$: deploy Wordpress \u002b free SSL with letsencrypt and haproxy","description":" Deplpy wordpress and add ssl certificates for free to increase the security using letsencrypt and certbot tool ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2021","datePublished":"2021-04-04T22:17:23+02:00","dateModified":"2021-04-04T22:17:23+02:00","url":"https:\/\/omarghader.github.io\/wordpress-haproxy-letsencrypt-free-ssl\/","wordCount":"1430","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["wordpress","woocommerce","haproxy","docker","letsencrypt","certificate","https certificate","haproxy letsencrypt docker","certbot","nginx","wordpress","woocommerce","haproxy","docker","letsencrypt","certificate","https certificate","haproxy letsencrypt docker","certbot","nginx","Blog"]}</script>
 <title>DIY 5$: deploy Wordpress + free SSL with letsencrypt and haproxy &#183; </title>
 <meta name=HandheldFriendly content="True">
 <meta name=viewport content="width=device-width,initial-scale=1">
@@ -81,13 +81,10 @@
 <li>6- Optional : Please subscribe to my youtube channel if you like this tutorial to get all the new updates:)</li>
 </ul>
 <iframe src="https://www.youtube.com/embed/PtAH55Puccg?start=" style=position:absolute;top:0;left:0;width:560;height:315 allowfullscreen frameborder=0 title="YouTube Video"></iframe>
-<h2 id=step-1--rent-a-server>Step 1 : Rent a server</h2>
-<p>For this tutorial, you need a linux machine with an external IP address/FDQN. I am using Linode server because it is very performant and affordable.</p>
-<p>For 5$/month only: 1 GB Ram, 1 core and 25 GB storage.</p>
-<p>You can click on <a href=https://linode.gvw92c.net/c/2688530/939219/10906>this link</a> or on the image below to get <code>100$ free credit</code>.
-<a href=https://linode.gvw92c.net/c/2688530/939219/10906 target=_top id=939219>
-<img src=https://omarghader.github.io/img/linode.jpg border=0 alt width=728 height=90>
-</a></p>
+<h2 id=step-1--having-a-server>Step 1 : Having a server</h2>
+<p>Personnally, I deploy it on my <a href=https://s.click.aliexpress.com/e/_9vftqR>raspberry pi 4B</a>.</p>
+<p>Buy it from Aliexpress: <a href=https://s.click.aliexpress.com/e/_9vftqR>raspberry pi 4B</a>
+Buy it from amazon: <a href=https://shorturl.servebeer.com/n/raspberrypi4b>raspberry pi 4b</a></p>
 <h2 id=step-2--install-the-tools>Step 2 : Install the tools</h2>
 <p>The only 2 tools necessary for this tutorial are :</p>
 <ul>
@@ -111,10 +108,9 @@ Also, you will notice that wordpress and haproxy will be deployed using <code>di
 <p>So that, we should create a network before deploying the stacks to connect them easily.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker network create -d overlay --attachable proxy
 </code></pre></div><p>Now copy this file to <code>myproject/wordpress/docker-compose.yml</code>.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#39;3.8&#39;</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#34;3.8&#34;</span>
 
 <span style=color:#f92672>services</span>:
-
   <span style=color:#f92672>wordpress</span>:
     <span style=color:#f92672>image</span>: <span style=color:#ae81ff>wordpress</span>
     <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>always</span>
@@ -140,7 +136,7 @@ Also, you will notice that wordpress and haproxy will be deployed using <code>di
       <span style=color:#f92672>MYSQL_DATABASE</span>: <span style=color:#ae81ff>exampledb</span>
       <span style=color:#f92672>MYSQL_USER</span>: <span style=color:#ae81ff>exampleuser</span>
       <span style=color:#f92672>MYSQL_PASSWORD</span>: <span style=color:#ae81ff>examplepass</span>
-      <span style=color:#f92672>MYSQL_RANDOM_ROOT_PASSWORD</span>: <span style=color:#e6db74>&#39;1&#39;</span>
+      <span style=color:#f92672>MYSQL_RANDOM_ROOT_PASSWORD</span>: <span style=color:#e6db74>&#34;1&#34;</span>
     <span style=color:#f92672>volumes</span>:
       - <span style=color:#ae81ff>db:/var/lib/mysql</span>
     <span style=color:#f92672>networks</span>:
@@ -148,9 +144,9 @@ Also, you will notice that wordpress and haproxy will be deployed using <code>di
 
 <span style=color:#f92672>volumes</span>:
   <span style=color:#f92672>wordpress</span>:
-    <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#39;wordpress&#39;</span>
+    <span style=color:#f92672>name</span>: <span style=color:#e6db74>&#34;wordpress&#34;</span>
   <span style=color:#f92672>db</span>:
-    <span style=color:#f92672>name </span>: <span style=color:#ae81ff>db</span>
+    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>db</span>
 
 <span style=color:#f92672>networks</span>:
   <span style=color:#f92672>proxy</span>:
@@ -198,10 +194,10 @@ defaults
 frontend http
     bind *:80
     mode http
-	
+
 	# if this is an ACME request to proof the domain ownder, then redirect to nginx-certbot server
     acl is_well_known path_beg -i /.well-known/
-	
+
 	# else redirect the traffic to https
     redirect scheme https code 301 if !is_well_known !{ ssl_fc }
     use_backend letsencrypt if is_well_known
@@ -235,7 +231,7 @@ backend wordpress
     |--certs
 ...
 </code></pre><p>Create a self signed certificate using openssl.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ sudo apt-get install openssl 
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ sudo apt-get install openssl
 $ openssl req -nodes -x509 -newkey rsa:2048 -keyout test.key -out test.crt -days <span style=color:#ae81ff>30</span>
 $ cat test.key test.crt &gt; ./certs/test.pem
 </code></pre></div><blockquote>
@@ -401,10 +397,10 @@ Therefore, I have create a github repository to share this code with you.</p>
 </div>
 <div class=read-next-card-content>
 <ul>
-<li><a href=https://omarghader.github.io/monitor-your-applications-easily-with-grafana-and-prometheus/>Monitor your applications easily with Grafana and Prometheus</a></li>
+<li><a href=https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/>Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia</a></li>
+<li><a href=https://omarghader.github.io/esp32-am312-pir-motion-sensor/>ESP32 AM312 motion sensor automation</a></li>
 <li><a href=https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/>Align div to the bottom of the page in 3 steps</a></li>
-<li><a href=https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/>Docker Tutorial : PhpMyAdmin and MySQL Server</a></li>
-<li><a href=https://omarghader.github.io/how-to-center-a-element-inside-div-with-css/>How to center a element inside div with css</a></li>
+<li><a href=https://omarghader.github.io/jenkins-nodejs-configuration/>Configuring Node js on Jenkins using docker</a></li>
 </ul>
 </div>
 <footer class=read-next-card-footer>

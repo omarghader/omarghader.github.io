@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv=content-type content="text/html" charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"How to connect ESP32 to home assistant in 5 minutes","headline":"How to connect ESP32 to home assistant in 5 minutes","description":" a tutorial to connect esp32 esphome to home assistant using esphome and create an automation example when temperature is low than 21 degrees ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2020","datePublished":"2020-10-13T20:57:23+02:00","dateModified":"2020-10-13T20:57:23+02:00","url":"https:\/\/omarghader.github.io\/how-to-connect-esp32-esphome-to-home-assistant\/","wordCount":"493","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["esphome","esp32","xiaomi mijia","iot","esp32 esphome","esphome projects","esp32 xiaomi","esp32 home assistant","home assistant","ble","esp32 home asistant","esphome home assistant configuration","home assistant docker","hass","esphome","esp32","xiaomi mijia","iot","esp32 esphome","esphome projects","esp32 xiaomi","esp32 home assistant","home assistant","ble","esp32 home asistant","esphome home assistant configuration","home assistant docker","hass","Blog"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"How to connect ESP32 to home assistant in 5 minutes","headline":"How to connect ESP32 to home assistant in 5 minutes","description":" a tutorial to connect esp32 esphome to home assistant using esphome and create an automation example when temperature is low than 21 degrees ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2020","datePublished":"2020-10-13T20:57:23+02:00","dateModified":"2020-10-13T20:57:23+02:00","url":"https:\/\/omarghader.github.io\/how-to-connect-esp32-esphome-to-home-assistant\/","wordCount":"517","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["esphome","esp32","xiaomi mijia","iot","esp32 esphome","esphome projects","esp32 xiaomi","esp32 home assistant","home assistant","ble","esp32 home asistant","esphome home assistant configuration","home assistant docker","hass","esphome","esp32","xiaomi mijia","iot","esp32 esphome","esphome projects","esp32 xiaomi","esp32 home assistant","home assistant","ble","esp32 home asistant","esphome home assistant configuration","home assistant docker","hass","Blog"]}</script>
 <title>How to connect ESP32 to home assistant in 5 minutes &#183; </title>
 <meta name=HandheldFriendly content="True">
 <meta name=viewport content="width=device-width,initial-scale=1">
@@ -82,7 +82,7 @@ However, this article will explain how to install on your computer using docker 
 | -- config
 </code></pre><p>Now add the file <code>docker-compose.yaml</code> to <code>myproject</code> folder.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#75715e># docker-compose.yaml</span>
-<span style=color:#f92672>version</span>: <span style=color:#e6db74>&#39;3.5&#39;</span>
+<span style=color:#f92672>version</span>: <span style=color:#e6db74>&#34;3.5&#34;</span>
 <span style=color:#f92672>services</span>:
   <span style=color:#f92672>homeassistant</span>:
     <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>home-assistant</span>
@@ -97,7 +97,11 @@ However, this article will explain how to install on your computer using docker 
     <span style=color:#f92672>network_mode</span>: <span style=color:#ae81ff>host</span>
 </code></pre></div><p>Run the home assistant :</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker-compose up -d
-</code></pre></div><h2 id=setup-home-assistant>Setup home assistant</h2>
+</code></pre></div><h2 id=requirements>Requirements</h2>
+<p>Personnally, I deploy it on my <a href=https://s.click.aliexpress.com/e/_9vftqR>raspberry pi 4B</a>.</p>
+<p>Buy it from Aliexpress: <a href=https://s.click.aliexpress.com/e/_9vftqR>raspberry pi 4B</a>
+Buy it from amazon: <a href=https://shorturl.servebeer.com/n/raspberrypi4b>raspberry pi 4b</a></p>
+<h2 id=setup-home-assistant>Setup home assistant</h2>
 <p>Congratulations, your home assistant is now running. You need to configure it as following:</p>
 <ul>
 <li>Go to <a href=http://localhost:8123>http://localhost:8123</a></li>
@@ -169,10 +173,10 @@ However, this article will explain how to install on your computer using docker 
 </div>
 <div class=read-next-card-content>
 <ul>
-<li><a href=https://omarghader.github.io/monitor-your-applications-easily-with-grafana-and-prometheus/>Monitor your applications easily with Grafana and Prometheus</a></li>
-<li><a href=https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/>Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia</a></li>
 <li><a href=https://omarghader.github.io/how-to-create-a-sliding-menu-bar/>How to create a sliding menu bar</a></li>
-<li><a href=https://omarghader.github.io/how-to-center-a-element-inside-div-with-css/>How to center a element inside div with css</a></li>
+<li><a href=https://omarghader.github.io/how-to-turn-off-light-automatically/>How to turn off the light automatically when you go out using esp32</a></li>
+<li><a href=https://omarghader.github.io/esp32-cam-tutorial/>ESP32 cam tutorial: Setup 5$ live streaming camera for you house with esphome</a></li>
+<li><a href=https://omarghader.github.io/my-first-post/>My First Post</a></li>
 </ul>
 </div>
 <footer class=read-next-card-footer>
@@ -181,7 +185,7 @@ However, this article will explain how to install on your computer using docker 
 </article>
 <article class="post-card post">
 <a class=post-card-image-link href=https://omarghader.github.io/haproxy-letsencrypt-docker-certbot-certificates/>
-<div class=post-card-image style=background-image:url(https://omarghader.github.io/defimg/3.jpg)></div>
+<div class=post-card-image style=background-image:url(https://omarghader.github.io/defimg/7.jpg)></div>
 </a>
 <div class=post-card-content>
 <a class=post-card-content-link href=https://omarghader.github.io/haproxy-letsencrypt-docker-certbot-certificates/>
