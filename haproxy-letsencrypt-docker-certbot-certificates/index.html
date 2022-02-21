@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv=content-type content="text/html" charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"HAProxy LetsEncrypt Docker Tutorial: Create and Renew HTTPs Certificates for free","headline":"HAProxy LetsEncrypt Docker Tutorial: Create and Renew HTTPs Certificates for free","description":" Use certbot to create free letsencrypt HTTPS certificates for HAPROXY docker and renew it automatically ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2020","datePublished":"2020-10-22T17:57:23+02:00","dateModified":"2020-10-22T17:57:23+02:00","url":"https:\/\/omarghader.github.io\/haproxy-letsencrypt-docker-certbot-certificates\/","wordCount":"1222","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["haproxy","docker","letsencrypt","certificate","https certificate","haproxy letsencrypt docker","certbot","nginx","haproxy","docker","letsencrypt","certificate","https certificate","haproxy letsencrypt docker","certbot","nginx","Blog"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"HAProxy LetsEncrypt Docker Tutorial: Create and Renew HTTPs Certificates for free","headline":"HAProxy LetsEncrypt Docker Tutorial: Create and Renew HTTPs Certificates for free","description":" Use certbot to create free letsencrypt HTTPS certificates for HAPROXY docker and renew it automatically ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2020","datePublished":"2020-10-22T17:57:23+02:00","dateModified":"2020-10-22T17:57:23+02:00","url":"https:\/\/omarghader.github.io\/haproxy-letsencrypt-docker-certbot-certificates\/","wordCount":"1217","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["haproxy","docker","letsencrypt","certificate","https certificate","haproxy letsencrypt docker","certbot","nginx","haproxy","docker","letsencrypt","certificate","https certificate","haproxy letsencrypt docker","certbot","nginx","Blog"]}</script>
 <title>HAProxy LetsEncrypt Docker Tutorial: Create and Renew HTTPs Certificates for free &#183; </title>
 <meta name=HandheldFriendly content="True">
 <meta name=viewport content="width=device-width,initial-scale=1">
@@ -64,7 +64,7 @@
 </section>
 <h1 class=post-full-title>HAProxy LetsEncrypt Docker Tutorial: Create and Renew HTTPs Certificates for free</h1>
 </header>
-<figure class=post-full-image style=background-image:url(https://omarghader.github.io/defimg/4.jpg)>
+<figure class=post-full-image style=background-image:url(https://omarghader.github.io/defimg/5.jpg)>
 </figure>
 <section class=post-full-content>
 <div class=kg-card-markdown>
@@ -92,11 +92,9 @@ The protocol ACME (Automated Certificate Management Environment) is used by Lets
 }
 </code></pre></div><h2 id=requirement>Requirement</h2>
 <p>For this tutorial, you need a linux machine with an external IP address/FDQN.
-I am using Linode server because it is very performant and affordable.</p>
-<p>You can click on <a href=https://linode.gvw92c.net/c/2688530/939219/10906>this link</a> or on the image below to get <code>100$ free credit</code>.
-<a href=https://linode.gvw92c.net/c/2688530/939219/10906 target=_top id=939219>
-<img src=https://omarghader.github.io/img/linode.jpg border=0 alt width=728 height=90>
-</a></p>
+Personnally, I deploy it on my <a href=https://s.click.aliexpress.com/e/_9vftqR>raspberry pi 4B</a>.</p>
+<p>Buy it from Aliexpress: <a href=https://s.click.aliexpress.com/e/_9vftqR>raspberry pi 4B</a>
+Buy it from amazon: <a href=https://shorturl.servebeer.com/n/raspberrypi4b>raspberry pi 4b</a></p>
 <h2 id=haproxy-configuration>HAProxy configuration</h2>
 <p>Now that we have a running application, let&rsquo;s define the configuration of HAProxy that redirect the traffic to the application. Also, HAproxy should handle HTTPs requests and redirect all HTTP traffic to HTTPS.</p>
 <pre tabindex=0><code>myproject
@@ -123,10 +121,10 @@ defaults
 frontend http
     bind *:80
     mode http
-	
+
 	# if this is an ACME request to proof the domain ownder, then redirect to nginx-certbot server
     acl is_well_known path_beg -i /.well-known/
-	
+
 	# else redirect the traffic to https
     redirect scheme https code 301 if !is_well_known !{ ssl_fc }
     use_backend letsencrypt if is_well_known
@@ -140,7 +138,7 @@ frontend https
     default_backend mybackend
 
 backend mybackend
-    server backend1 172.17.0.1:5000 
+    server backend1 172.17.0.1:5000
     http-request add-header X-Forwarded-Proto https if { ssl_fc }
 
 </code></pre><p>The above configuration will:</p>
@@ -155,7 +153,7 @@ backend mybackend
 |--certs
 ...
 </code></pre><p>Create a self signed certificate using openssl.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ sudo apt-get install openssl 
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ sudo apt-get install openssl
 $ openssl req -nodes -x509 -newkey rsa:2048 -keyout test.key -out test.crt -days <span style=color:#ae81ff>30</span>
 $ cat test.key test.crt &gt; ./certs/test.pem
 </code></pre></div><blockquote>
@@ -290,7 +288,7 @@ docker service update --force proxy_proxy
 echo <span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>date<span style=color:#66d9ef>)</span><span style=color:#e6db74> Done&#34;</span> &gt;&gt; /var/log/letsencrypt-renew.log
 </code></pre></div><p>Create a crontask to run this renew script every month:</p>
 <pre tabindex=0><code>$ echo &quot;0 0 1 * * your_project_path/renew-certs.sh&quot; &gt;&gt; /etc/crontab
-</code></pre><h2 id=example-deploy-wordpress-with-free-ssl--certificate>Example: Deploy wordpress with free ssl certificate</h2>
+</code></pre><h2 id=example-deploy-wordpress-with-free-ssl-certificate>Example: Deploy wordpress with free ssl certificate</h2>
 <p>This is a full example on <a href=https://omarghader.github.io/wordpress-haproxy-letsencrypt-free-ssl/>how to deploy a wordpress + free ssl certificate</a>.</p>
 <h2 id=conclustion>Conclustion</h2>
 <p>There is many docker images that integrates the certbot mechanism. But I&rsquo;ve prefered to understand the mechanism and to do it by myself.</p>
@@ -327,10 +325,10 @@ echo <span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>da
 </div>
 <div class=read-next-card-content>
 <ul>
-<li><a href=https://omarghader.github.io/monitor-your-applications-easily-with-grafana-and-prometheus/>Monitor your applications easily with Grafana and Prometheus</a></li>
-<li><a href=https://omarghader.github.io/esp32-cam-tutorial/>ESP32 cam tutorial: Setup 5$ live streaming camera for you house with esphome</a></li>
+<li><a href=https://omarghader.github.io/how-to-create-a-sliding-menu-bar/>How to create a sliding menu bar</a></li>
 <li><a href=https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/>Align div to the bottom of the page in 3 steps</a></li>
-<li><a href=https://omarghader.github.io/jenkins-nodejs-configuration/>Configuring Node js on Jenkins using docker</a></li>
+<li><a href=https://omarghader.github.io/my-first-post/>My First Post</a></li>
+<li><a href=https://omarghader.github.io/docker-compose-tutorial/>Docker Compose Tutorial</a></li>
 </ul>
 </div>
 <footer class=read-next-card-footer>
