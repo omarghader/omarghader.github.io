@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv=content-type content="text/html" charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"Cheap 15$ Air quality monitor: ESP32, Bluetooth \u0026 Home assistant","headline":"Cheap 15$ Air quality monitor: ESP32, Bluetooth \u0026 Home assistant","description":" Setup and connect esp32 to Airbox WP6003 using bluetooth and connect it to home assistant ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2022","datePublished":"2022-02-22T08:57:23+02:00","dateModified":"2022-02-22T08:57:23+02:00","url":"https:\/\/omarghader.github.io\/esp32-airquality-box-wp6003-homeassistant\/","wordCount":"742","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["esphome","esp32","wp6003","air quality","iot","esp32 esphome","esphome projects","esp32 co2","esp32 home assistant","home assistant","airquality co2","bluetooth co2 monitor","esp32 pir","esp32 home asistant","esphome home assistant configuration","home assistant docker","hass","esphome","esp32","wp6003","air quality","iot","esp32 esphome","esphome projects","esp32 co2","esp32 home assistant","home assistant","airquality co2","bluetooth co2 monitor","esp32 pir","esp32 home asistant","esphome home assistant configuration","home assistant docker","hass","Blog"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/omarghader.github.io\/"},"articleSection":"post","name":"Cheap 15$ Air quality monitor: ESP32, Bluetooth \u0026 Home assistant","headline":"Cheap 15$ Air quality monitor: ESP32, Bluetooth \u0026 Home assistant","description":" Setup and connect esp32 to Airbox WP6003 using bluetooth and connect it to home assistant ","inLanguage":"en-US","author":"Omar Ghader","creator":"Omar Ghader","publisher":"Omar Ghader","accountablePerson":"map[]","copyrightHolder":"map[]","copyrightYear":"2022","datePublished":"2022-02-22T08:57:23+02:00","dateModified":"2022-02-22T08:57:23+02:00","url":"https:\/\/omarghader.github.io\/esp32-airquality-box-wp6003-homeassistant\/","wordCount":"744","image":"https:\/\/omarghader.github.io\//img/logo.png","keywords":["esphome","esp32","wp6003","air quality","iot","esp32 esphome","esphome projects","esp32 co2","esp32 home assistant","home assistant","airquality co2","bluetooth co2 monitor","esp32 pir","esp32 home asistant","esphome home assistant configuration","home assistant docker","hass","esphome","esp32","wp6003","air quality","iot","esp32 esphome","esphome projects","esp32 co2","esp32 home assistant","home assistant","airquality co2","bluetooth co2 monitor","esp32 pir","esp32 home asistant","esphome home assistant configuration","home assistant docker","hass","Blog"]}</script>
 <title>Cheap 15$ Air quality monitor: ESP32, Bluetooth & Home assistant &#183; </title>
 <meta name=HandheldFriendly content="True">
 <meta name=viewport content="width=device-width,initial-scale=1">
@@ -70,7 +70,7 @@
 <section class=post-full-content>
 <div class=kg-card-markdown>
 <p>If you are a DIY lover, the first sensors you look at are : temperature sensor and airquality sensor. #Metoo.</p>
-<p>I have started with temperature sensor in <a href=https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/>this article</a> and found that amazing. I decided to go to airquality monitoring.</p>
+<p>I have started with the temperature sensor in <a href=https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/>this article</a> and found that amazing. I decided to go try the airquality monitoring.</p>
 <p>I wanted something cheap, and ideally with bluetooth to connect it easily to my ESP32 and Home assistant, I found that Airbox WP6003 can do the job.</p>
 <h2 id=requirements>Requirements:</h2>
 <p><em>Aliexpress:</em></p>
@@ -85,7 +85,7 @@
 </ul>
 <h2 id=collecting-information>Collecting information</h2>
 <p>BLE devices normally has characteristics that can be access using an ID. These characteristics contains the data. This is the easiest way.</p>
-<p>However some manufacturers has decided to make it more complicated and to not store this information in a characteristic. <code>The data is sent using a notification only</code>. This is the case for WP6003.</p>
+<p>However some manufacturers have decided to make it more complicated and to not store this information in a characteristic. <code>The data is sent using a notification only</code>. This is the case for WP6003.</p>
 <p>To see what I am talking about, execute the following command on your linux shell:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ gatttool -I -b XX:XX:XX:XX:XX:XX
 <span style=color:#f92672>[</span>XX:XX:XX:XX:XX:XX<span style=color:#f92672>]</span> connect
@@ -115,7 +115,7 @@ Notification handle <span style=color:#f92672>=</span> 0x0012 value: 0a <span st
 temperature 19.5  =&gt; we should look for 195 =&gt; HEX : 0xc3
 hcho: 0.116       =&gt; we should look for 116 =&gt; HEX : 0x83
 tvoc: 0.825       =&gt; we should look for 825 =&gt; HEX : 0x0339
-</code></pre><p>By putting the notification data and the data above, we can understand that:</p>
+</code></pre><p>By comparing the notification data and the data above, we can understand that:</p>
 <pre tabindex=0><code>Notification handle = 0x0012 value: 0a 16 02 0e 0d 2d 00 c3 58 02 03 39 00 83 01 00 02 dc
                                                          19.5       825   116         732 - (150)
                                                          temp       tvoc   hcho
@@ -241,10 +241,10 @@ tvoc: 0.825       =&gt; we should look for 825 =&gt; HEX : 0x0339
 </div>
 <div class=read-next-card-content>
 <ul>
-<li><a href=https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/>Docker Tutorial : PhpMyAdmin and MySQL Server</a></li>
-<li><a href=https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/>Align div to the bottom of the page in 3 steps</a></li>
-<li><a href=https://omarghader.github.io/esp32-cam-tutorial/>ESP32 cam tutorial: Setup 5$ live streaming camera for you house with esphome</a></li>
-<li><a href=https://omarghader.github.io/how-to-turn-off-light-automatically/>How to turn off the light automatically when you go out using esp32</a></li>
+<li><a href=https://omarghader.github.io/jenkins-nodejs-configuration/>Configuring Node js on Jenkins using docker</a></li>
+<li><a href=https://omarghader.github.io/how-to-center-a-element-inside-div-with-css/>How to center a element inside div with css</a></li>
+<li><a href=https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/>Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia</a></li>
+<li><a href=https://omarghader.github.io/esp32-am312-pir-motion-sensor/>ESP32 AM312 motion sensor automation</a></li>
 </ul>
 </div>
 <footer class=read-next-card-footer>
