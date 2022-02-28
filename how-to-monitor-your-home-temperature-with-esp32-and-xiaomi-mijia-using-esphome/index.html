@@ -74,13 +74,13 @@
 <h2 id=requirements>Requirements</h2>
 <p><em>Amazon</em>:</p>
 <ul>
-<li>ESP32-DevKitC board: <a href=https://shorturl.servebeer.com/n/esp32>Buy here from amazon</a></li>
-<li>Xiaomi Mijia Thermoemter v2: <a href=https://shorturl.servebeer.com/n/mijia-bluetooth-thermometer>Buy here from amazon</a></li>
+<li>ESP32-DevKitC board: <a href=https://shorturl.servebeer.com/n/esp32 target=_blank>Buy here from amazon</a></li>
+<li>Xiaomi Mijia Thermoemter v2: <a href=https://shorturl.servebeer.com/n/mijia-bluetooth-thermometer target=_blank>Buy here from amazon</a></li>
 </ul>
 <p><em>Aliexpress</em>:</p>
 <ul>
-<li>ESP32-DevKitC board : <a href=https://s.click.aliexpress.com/e/_ADRskV>Buy here from aliexpress</a></li>
-<li>Xiaomi Mijia Thermoemter v2 with battery : <a href=https://s.click.aliexpress.com/e/_ADiMxF>Buy here from aliexpress</a></li>
+<li>ESP32-DevKitC board : <a href=https://s.click.aliexpress.com/e/_ADRskV target=_blank>Buy here from aliexpress</a></li>
+<li>Xiaomi Mijia Thermoemter v2 with battery : <a href=https://s.click.aliexpress.com/e/_ADiMxF target=_blank>Buy here from aliexpress</a></li>
 </ul>
 <blockquote>
 <p><strong>If you find any problem during this tutorial</strong>: Please leave a commment and I will reply very soon!</p>
@@ -181,21 +181,21 @@ Create a directory for your project. In this directory, add the following docker
 | |-- livingroom.yaml
 </code></pre><p>Here is the docker-compose.yaml file.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#75715e># docker-compose.yaml file</span>
-<span style=color:#f92672>version</span>: <span style=color:#e6db74>&#39;3.5&#39;</span>
+<span style=color:#f92672>version</span>: <span style=color:#e6db74>&#34;3.5&#34;</span>
 
 <span style=color:#f92672>services</span>:
-    <span style=color:#f92672>esphome</span>:
-        <span style=color:#f92672>image</span>: <span style=color:#ae81ff>esphome/esphome</span>
-        <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>esphome</span>
-        <span style=color:#f92672>ports</span>:
-            - <span style=color:#ae81ff>6052</span>:<span style=color:#ae81ff>6052</span>
-        <span style=color:#f92672>volumes</span>:
-            <span style=color:#75715e># HERE we will add the livingroom.yaml</span>
-            - <span style=color:#ae81ff>./config:/config</span>
-        <span style=color:#f92672>network_mode</span>: <span style=color:#ae81ff>host</span>
-        <span style=color:#75715e># Important to flash using USB</span>
-        <span style=color:#f92672>devices</span>:
-            - <span style=color:#ae81ff>/dev/ttyUSB0:/dev/ttyUSB0</span>
+  <span style=color:#f92672>esphome</span>:
+    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>esphome/esphome</span>
+    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>esphome</span>
+    <span style=color:#f92672>ports</span>:
+      - <span style=color:#ae81ff>6052</span>:<span style=color:#ae81ff>6052</span>
+    <span style=color:#f92672>volumes</span>:
+      <span style=color:#75715e># HERE we will add the livingroom.yaml</span>
+      - <span style=color:#ae81ff>./config:/config</span>
+    <span style=color:#f92672>network_mode</span>: <span style=color:#ae81ff>host</span>
+    <span style=color:#75715e># Important to flash using USB</span>
+    <span style=color:#f92672>devices</span>:
+      - <span style=color:#ae81ff>/dev/ttyUSB0:/dev/ttyUSB0</span>
 </code></pre></div><p>Run the ESPhome using the command <code>docker-compose up -d</code></p>
 <h3 id=flash-the-configuration>Flash the configuration</h3>
 <p>Now that your ESPHome is running, go to <a href=http://localhost:6052>http://localhost:6052</a>. You should see an interface with <code>livingroom</code> item appearing.
@@ -246,9 +246,9 @@ In the next tutorial I will show you how to access the temperature data when you
 </div>
 <div class=read-next-card-content>
 <ul>
-<li><a href=https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/>Docker Tutorial : PhpMyAdmin and MySQL Server</a></li>
-<li><a href=https://omarghader.github.io/haproxy-letsencrypt-docker-certbot-certificates/>HAProxy LetsEncrypt Docker Tutorial: Create and Renew HTTPs Certificates for free</a></li>
 <li><a href=https://omarghader.github.io/my-first-post/>My First Post</a></li>
+<li><a href=https://omarghader.github.io/esp32-am312-pir-motion-sensor/>ESP32 AM312 motion sensor automation</a></li>
+<li><a href=https://omarghader.github.io/call-r-from-java-using-jri-library/>Call R From Java Using JRI Library</a></li>
 <li><a href=https://omarghader.github.io/how-to-connect-esp32-esphome-to-home-assistant/>How to connect ESP32 to home assistant in 5 minutes</a></li>
 </ul>
 </div>
@@ -292,7 +292,7 @@ In the next tutorial I will show you how to access the temperature data when you
 </article>
 <article class="post-card post">
 <a class=post-card-image-link href=https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/>
-<div class=post-card-image style=background-image:url(https://omarghader.github.io/defimg/5.jpg)></div>
+<div class=post-card-image style=background-image:url(https://omarghader.github.io/defimg/3.jpg)></div>
 </a>
 <div class=post-card-content>
 <a class=post-card-content-link href=https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/>
