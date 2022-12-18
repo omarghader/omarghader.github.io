@@ -2,11 +2,11 @@
 I have done a bunch of tests and will share with you how to connect and read your data through zigbee using CC2531 usb dongle and home assistant.</description></item><item><title>ESP32 AM312 motion sensor automation</title><link>https://omarghader.github.io/esp32-am312-pir-motion-sensor/</link><pubDate>Sun, 20 Feb 2022 21:57:23 +0200</pubDate><guid>https://omarghader.github.io/esp32-am312-pir-motion-sensor/</guid><description>DIY 5 minutes : Connect esp32 to the motion sensor am312 and create an automation.
 In the last article, we&amp;rsquo;ve seen how to turn on/off the smart light depending on the presence of your smartwatch. In this article, we will see how to turn on/off the light using the PIR motion sensor AM312.
 Requirements Before starting the tutorial, you should have these materials.
-Amazon Europe
+Amazon France
 Esp32 DevKit v1 : Buy it from Amazon .</description></item><item><title>How to turn off the light automatically when you go out using esp32</title><link>https://omarghader.github.io/how-to-turn-off-light-automatically/</link><pubDate>Sat, 23 Jan 2021 20:57:23 +0200</pubDate><guid>https://omarghader.github.io/how-to-turn-off-light-automatically/</guid><description>Everytime you go out and you forget to turn off the light !
 Don&amp;rsquo;t worry, you are not alone in this situation. We are all LAZY. In this article, we will make it simple and easy to make some economy on your electric bill, but we will also contribute to save the planet.
 Requirements Before starting the tutorial, you should have these materials.
-Amazon Europe
+Amazon France
 Esp32 DevKit v1 : Buy it from Amazon .</description></item><item><title>ESP32 cam tutorial: Setup a 5$ live streaming camera for your house with esphome</title><link>https://omarghader.github.io/esp32-cam-tutorial/</link><pubDate>Sat, 02 Jan 2021 20:57:23 +0200</pubDate><guid>https://omarghader.github.io/esp32-cam-tutorial/</guid><description>Yes you can monitor your house with live streaming for only 5$.
 How? In this article, I will show you my test with esp32 camera. In addition, you will see how to configure it using esphome. Finally, I will show you how to connect esp32 cam to home assistant.
 Requirements Before starting the tutorial, you should have these materials. Aliexpress:
