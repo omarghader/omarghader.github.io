@@ -1,0 +1,11 @@
+.site-logo {
+  max-height: 200px !important;
+}
+
+.post-full-image {
+  height: 60vh !important;
+}
+
+.highlight {
+  max-width: 100vw;
+}
