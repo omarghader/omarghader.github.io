@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Esphome on</title><link>https://omarghader.github.io/tags/esphome/</link><description>Recent content in Esphome on</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Thu, 09 Mar 2023 08:14:23 +0200</lastBuildDate><atom:link href="https://omarghader.github.io/tags/esphome/index.xml" rel="self" type="application/rss+xml"/><item><title>Esp32 + 1$ DHT22 temperature sensor</title><link>https://omarghader.github.io/esp32-dht22-temperature-humidity-sensor/</link><pubDate>Thu, 09 Mar 2023 08:14:23 +0200</pubDate><guid>https://omarghader.github.io/esp32-dht22-temperature-humidity-sensor/</guid><description>&lt;p>ESPHome is a powerful framework for building IoT devices using ESP8266, ESP32, and other microcontrollers. It allows you to easily configure and control your devices from a web interface. In this tutorial, we will learn how to connect the DHT22 sensor to the ESP32 board using ESPHome. Let&amp;rsquo;s get started.&lt;/p>
+&lt;h2 id="step-1-install-esphome">Step 1: Install ESPHome&lt;/h2>
+&lt;p>Before we begin, make sure you have installed ESPHome on your computer. Follow the instructions on the ESPHome website to install ESPHome.&lt;/p></description></item><item><title>Cheap 15$ Air quality monitor: ESP32, Bluetooth &amp; Home assistant</title><link>https://omarghader.github.io/esp32-airquality-box-wp6003-homeassistant/</link><pubDate>Tue, 22 Feb 2022 08:57:23 +0200</pubDate><guid>https://omarghader.github.io/esp32-airquality-box-wp6003-homeassistant/</guid><description>&lt;p>If you are a DIY lover, the first sensors you look at are : temperature sensor and airquality sensor. #Metoo.&lt;/p>
+&lt;p>I have started with the temperature sensor in &lt;a href="https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/">this article&lt;/a> and found that amazing. I decided to go try the airquality monitoring.&lt;/p>
+&lt;p>I wanted something cheap, and ideally with bluetooth to connect it easily to my ESP32 and Home assistant, I found that Airbox WP6003 can do the job.&lt;/p>
+&lt;h2 id="requirements">Requirements:&lt;/h2>
+&lt;!-- &lt;div style="width: 100%; margin-bottom: 16px">
+ &lt;a
+ href="https://torifio.com"
+ onclick="gtag('event', 'torifio', {'event_category': 'click','event_label': 'torifio_home'})"
+ target="_blank"
+ style="font-weight: bold"
+ >Torifio.com&lt;/a
+ >
+&lt;/div>
+&lt;p>
+ I have created Torifio to provide fast delivery and cheap products in Europe.
+&lt;/p></description></item><item><title>ESP32 AM312 motion sensor automation</title><link>https://omarghader.github.io/esp32-am312-pir-motion-sensor/</link><pubDate>Sun, 20 Feb 2022 21:57:23 +0200</pubDate><guid>https://omarghader.github.io/esp32-am312-pir-motion-sensor/</guid><description>&lt;p>DIY 5 minutes : Connect esp32 to the motion sensor am312 and create an automation.&lt;/p>
+&lt;p>In the &lt;a href="https://omarghader.github.io/how-to-turn-off-light-automatically/">last article&lt;/a>, we&amp;rsquo;ve seen how to turn on/off the smart light depending on the presence of your smartwatch. In this article, we will see how to turn on/off the light using the PIR motion sensor AM312.&lt;/p>
+&lt;h2 id="requirements">Requirements&lt;/h2>
+&lt;p>Before starting the tutorial, you should have these materials.&lt;/p>
+&lt;!-- &lt;div style="width: 100%; margin-bottom: 16px">
+ &lt;a
+ href="https://torifio.com"
+ onclick="gtag('event', 'torifio', {'event_category': 'click','event_label': 'torifio_home'})"
+ target="_blank"
+ style="font-weight: bold"
+ >Torifio.com&lt;/a
+ >
+&lt;/div>
+&lt;p>
+ I have created Torifio to provide fast delivery and cheap products in Europe.
+&lt;/p></description></item><item><title>How to turn off the light automatically when you go out using esp32</title><link>https://omarghader.github.io/how-to-turn-off-light-automatically/</link><pubDate>Sat, 23 Jan 2021 20:57:23 +0200</pubDate><guid>https://omarghader.github.io/how-to-turn-off-light-automatically/</guid><description>&lt;p>Everytime you go out and you forget to turn off the light !&lt;/p>
+&lt;p>Don&amp;rsquo;t worry, you are not alone in this situation. We are all LAZY. In this article, we will make it simple and easy to make some economy on your electric bill, but we will also contribute to save the planet.&lt;/p>
+&lt;h2 id="requirements">Requirements&lt;/h2>
+&lt;p>Before starting the tutorial, you should have these materials.&lt;/p>
+&lt;!-- &lt;div style="width: 100%; margin-bottom: 16px">
+ &lt;a
+ href="https://torifio.com"
+ onclick="gtag('event', 'torifio', {'event_category': 'click','event_label': 'torifio_home'})"
+ target="_blank"
+ style="font-weight: bold"
+ >Torifio.com&lt;/a
+ >
+&lt;/div>
+&lt;p>
+ I have created Torifio to provide fast delivery and cheap products in Europe.
+&lt;/p></description></item><item><title>ESP32 cam tutorial: Setup a 5$ live streaming camera for your house with esphome</title><link>https://omarghader.github.io/esp32-cam-tutorial/</link><pubDate>Sat, 02 Jan 2021 20:57:23 +0200</pubDate><guid>https://omarghader.github.io/esp32-cam-tutorial/</guid><description>&lt;p>Yes you can monitor your house with live streaming for &lt;code>only 5$&lt;/code>.&lt;/p>
+&lt;p>How? In this article, I will show you my test with esp32 camera. In addition, you will see how to configure it using esphome. Finally, I will show you how to connect esp32 cam to home assistant.&lt;/p>
+&lt;h2 id="requirements">Requirements&lt;/h2>
+&lt;p>Before starting the tutorial, you should have these materials.
+&lt;strong>Aliexpress&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>ESP32 cam chip with camera module OV2640. &lt;a onclick="gtag('event', 'aliexpress', {'event_category': 'click','event_label': 'esp32-cam'})" href="https://s.click.aliexpress.com/e/_Alj8bx" target="_blank">Buy the kit from aliexpress&lt;/a>&lt;/li>
+&lt;li>Jump wires&lt;/li>
+&lt;li>FTDI 3.3V/5.5V TTL Module. &lt;a onclick="gtag('event', 'aliexpress', {'event_category': 'click','event_label': 'ftdi'})" href="https://s.click.aliexpress.com/e/_Alj8bx" target="_blank">Buy the kit from aliexpress&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>If you find any problem during this tutorial&lt;/strong>: Please leave a commment and I will reply very soon!&lt;/p></description></item><item><title>How to connect ESP32 to home assistant in 5 minutes</title><link>https://omarghader.github.io/how-to-connect-esp32-esphome-to-home-assistant/</link><pubDate>Tue, 13 Oct 2020 20:57:23 +0200</pubDate><guid>https://omarghader.github.io/how-to-connect-esp32-esphome-to-home-assistant/</guid><description>&lt;p>How to connect ESP32 configured with ESPhome to home assistant.&lt;/p>
+&lt;p>In the &lt;a href="https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/">last article&lt;/a>, we&amp;rsquo;ve seen how to configure an ESP32 chip with ESPhome and how to connect it to Xiomi Mijia thermometer. Now, we will discover how to have a good graphical interface to monitor the temperature of the room.&lt;/p>
+&lt;h2 id="what-is-home-assistant">What is home assistant?&lt;/h2>
+&lt;p>Home assistant is an open source software that let you monitor IoT devices in your home. Also, it can create automation easily. For example, when the temperature is less than 21 degrees, you can send a notification to your mobile device. Also, you can may run your heater if you have a connected heater.&lt;/p></description></item><item><title>Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia</title><link>https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/</link><pubDate>Sun, 11 Oct 2020 20:57:23 +0200</pubDate><guid>https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/</guid><description>&lt;p>We live in a world where everything is connected. One day, I wanted to know the temperature of my house when I&amp;rsquo;m outside to check if the heating regulator is working or not. Already having a bluetooth Xiaomi Mijia lywsd03mmc thermometer, I was looking for something cheap and tiny to do connect to the thermometer and do the job.&lt;/p>
+&lt;p>I did some research and found a chip called &lt;code>ESP32&lt;/code>. This chip has integrated bluetooth and WIFI. It is very tiny (3cmx6cm). Also, very easy to program using some known tools like arduino or esphome. Therefore, I decided to give this a try and I bought it for 4$.&lt;/p></description></item></channel></rss>

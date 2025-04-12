@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title/><link>https://omarghader.github.io/</link><description>Recent content on</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Thu, 10 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://omarghader.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Detect HTTP Traffic Anomalies in Prometheus Using Z-Score-Based PromQL Alerts</title><link>https://omarghader.github.io/detect-http-traffic-anomalies-in-prometheus-using-z-score-based-promql-alerts/</link><pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/detect-http-traffic-anomalies-in-prometheus-using-z-score-based-promql-alerts/</guid><description>&lt;p>Monitoring HTTP request rates is one of the most basic yet essential tasks in observability. A sudden spike might indicate a traffic surge or even a DDoS attack, while a sudden drop could signal a backend failure. Static thresholds work, but they often miss subtle patterns or raise too many false alarms. A better way is to use statistical anomaly detection—specifically Z-score based alerts in Prometheus.&lt;/p>
+&lt;p>In this post, we’ll walk through how to set up a Z-score PromQL alert to detect anomalies in HTTP request rates using only Prometheus and native PromQL.&lt;/p></description></item><item><title>A Full Guide to Monitoring Strategies for Enterprises</title><link>https://omarghader.github.io/monitoring-strategy-enterprise/</link><pubDate>Sun, 22 Oct 2023 20:59:01 +0200</pubDate><guid>https://omarghader.github.io/monitoring-strategy-enterprise/</guid><description>&lt;p>Monitoring, stop being blind!&lt;/p>
+&lt;p>After 3 years working in the monitoring team at the one of the biggest videogames company, I will unveil some secrets and strategies of monitoring for enterprises. These strategies can be applied to small or big companies depending on their context and uses.&lt;/p>
+&lt;p>But &lt;strong>what is monitoring?&lt;/strong> Monitoring is the fact of collecting information about an entity (application, machine, URL&amp;hellip;) on a frequent basis. In general, this raw data is passed through visualization apps to give a visibility on the enterprise entities. Then, one of the end goals is to create alerts based on this data to detect or anticipate abnormal behaviors.&lt;/p></description></item><item><title>Vmalert: Revamp your Prometheus alert with microservices</title><link>https://omarghader.github.io/vmalert-setup/</link><pubDate>Thu, 28 Sep 2023 08:14:23 +0200</pubDate><guid>https://omarghader.github.io/vmalert-setup/</guid><description>&lt;p>Vmalert: the prometheus alerting microservice&lt;/p>
+&lt;p>While collecting metrics is important for monitoring, the real end goal is not visualizing the data. The most critical goal of metrics is to create alerts in case of bad behaviors or incidents. In the Prometheus world, prometheus itself generates alerts based on the metrics collected.&lt;/p>
+&lt;p>Let&amp;rsquo;s discover another product of VictoriaMetrics called &lt;a href="https://docs.victoriametrics.com/vmalert.html">Vmalert&lt;/a>. To be honest, Vmalert is not a revolutionary product, exactly like &lt;a href="https://omarghader.github.io/prometheus-duplicate-remotewrite/">Vmagent&lt;/a>, but its strength is the ability to do 1 role: handling alerts with the minimum resources.&lt;/p></description></item><item><title>How to send duplicate RemoteWrite metrics</title><link>https://omarghader.github.io/prometheus-duplicate-remotewrite/</link><pubDate>Mon, 25 Sep 2023 08:14:23 +0200</pubDate><guid>https://omarghader.github.io/prometheus-duplicate-remotewrite/</guid><description>&lt;p>When working with metrics, you may want to send the metrics you&amp;rsquo;ve collected to 2 different prometheus instances for backup. Despite that a &lt;a href="https://prometheus.io/docs/practices/remote_write/">feature in Prometheus&lt;/a> allows you send the metrics received to another prometheus, it&amp;rsquo;s not recommended to do that when working with high amounts of metrics.&lt;/p>
+&lt;p>Indeed, Prometheus consumes a lot of resources to do the remotewrite and this may reduce its capability to perform well. But other solution exists : lightweight, simple and works perfectly.&lt;/p></description></item><item><title>Esp32 + 1$ DHT22 temperature sensor</title><link>https://omarghader.github.io/esp32-dht22-temperature-humidity-sensor/</link><pubDate>Thu, 09 Mar 2023 08:14:23 +0200</pubDate><guid>https://omarghader.github.io/esp32-dht22-temperature-humidity-sensor/</guid><description>&lt;p>ESPHome is a powerful framework for building IoT devices using ESP8266, ESP32, and other microcontrollers. It allows you to easily configure and control your devices from a web interface. In this tutorial, we will learn how to connect the DHT22 sensor to the ESP32 board using ESPHome. Let&amp;rsquo;s get started.&lt;/p>
+&lt;h2 id="step-1-install-esphome">Step 1: Install ESPHome&lt;/h2>
+&lt;p>Before we begin, make sure you have installed ESPHome on your computer. Follow the instructions on the ESPHome website to install ESPHome.&lt;/p></description></item><item><title>Top 10 DIY Smarthome Projects You Wish You Know Them Before.</title><link>https://omarghader.github.io/top-10-smarthome-projects/</link><pubDate>Mon, 27 Feb 2023 20:00:00 +0100</pubDate><guid>https://omarghader.github.io/top-10-smarthome-projects/</guid><description>&lt;p>Smart home technology has become increasingly popular in recent years, with a wide range of devices available on the market. However, many people are also interested in DIY smart home projects using platforms like ESP32 or Tuya. In this article, we will explore 10 DIY smart home projects using ESP32 or Tuya.&lt;/p>
+&lt;h2 id="1-smart-home-security-system">1. Smart Home Security System&lt;/h2>
+&lt;p>You can create your own smart home security system using ESP32 and sensors such as door sensors, motion sensors, and window sensors. You can connect these sensors to the ESP32 board and program it to send alerts to your smartphone when triggered.&lt;/p></description></item><item><title>Zigbee2mqtt : Aqara temperature - Homeassistant without Xiaomi Gateway? Here is how !</title><link>https://omarghader.github.io/zigbee2mqtt-aqara-temperature-ccr2531-home-assistant/</link><pubDate>Fri, 09 Dec 2022 20:00:00 +0100</pubDate><guid>https://omarghader.github.io/zigbee2mqtt-aqara-temperature-ccr2531-home-assistant/</guid><description>&lt;p>If you are reading this article, you have already heard about zigbee. But also, maybe you don&amp;rsquo;t understand it, comparing to wifi or bluetooth. And maybe, you are looking for a cheap solution to connect to your smart devices using the protocol zigbee.&lt;/p>
+&lt;p>I have done a bunch of tests and will share with you how to connect and read your data through zigbee using CC2531 usb dongle and home assistant.&lt;/p></description></item><item><title>Grafana 9 Alert : How to customize alert message</title><link>https://omarghader.github.io/grafana-alerting-custom-message/</link><pubDate>Sat, 05 Nov 2022 11:09:41 +0100</pubDate><guid>https://omarghader.github.io/grafana-alerting-custom-message/</guid><description>&lt;p>Grafana added the alert feature recently and it&amp;rsquo;s now released with the Grafana 9. That&amp;rsquo;s a great feature for the people who don&amp;rsquo;t want to set a proper alermanager and to configure it. I&amp;rsquo;ve took the time to explore the alert and play with it. Let&amp;rsquo;s see how it works!&lt;/p>
+&lt;h2 id="deploy-grafana-and-prometheus">Deploy grafana and prometheus&lt;/h2>
+&lt;p>With the docker-compose file below run the grafana and prometheus &lt;code>docker-compose up -d&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># docker-compose.yml file&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">version&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;3.5&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">services&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">prometheus&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">image&lt;/span>: &lt;span style="color:#ae81ff">quay.io/prometheus/prometheus:latest&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">volumes&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">#- ./prometheus.yml:/etc/prometheus/prometheus.yml&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">prometheus:/prometheus&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">#command: &amp;#34;--config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">ports&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">9090&lt;/span>:&lt;span style="color:#ae81ff">9090&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">grafana&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">image&lt;/span>: &lt;span style="color:#ae81ff">grafana/grafana:latest&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">ports&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#e6db74">&amp;#34;3000:3000&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">volumes&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">grafana-storage:/var/lib/grafana&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">volumes&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">prometheus&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">prometheus&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">grafana-storage&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">grafana-storage&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="build-your-alert">Build your alert&lt;/h2>
+&lt;p>I have 2 websites running on a raspberrypi. In my case, I would like to know when the website is down and to get notified with the website name.&lt;/p></description></item><item><title>Go strings manipulation: Optimize performance x100</title><link>https://omarghader.github.io/golang-strings-manipulation-optimization-performance/</link><pubDate>Sun, 30 Oct 2022 08:57:23 +0200</pubDate><guid>https://omarghader.github.io/golang-strings-manipulation-optimization-performance/</guid><description>&lt;p>Optimization, faster, better&amp;hellip; these words are always what we search for on google to make our programs more performant.&lt;/p>
+&lt;p>In a recent project I&amp;rsquo;ve worked on, the optimization was the main focus. While string manipulation could not be your issue if your program process few words, my project was processing millions of strings per second. Thus, each nanosecond counts!&lt;/p>
+&lt;p>The tips below are the fruit of 2 months of work. These tips may not all fit your needs, test them all and choose what fits your code more.&lt;/p></description></item><item><title>Cheap 15$ Air quality monitor: ESP32, Bluetooth &amp; Home assistant</title><link>https://omarghader.github.io/esp32-airquality-box-wp6003-homeassistant/</link><pubDate>Tue, 22 Feb 2022 08:57:23 +0200</pubDate><guid>https://omarghader.github.io/esp32-airquality-box-wp6003-homeassistant/</guid><description>&lt;p>If you are a DIY lover, the first sensors you look at are : temperature sensor and airquality sensor. #Metoo.&lt;/p>
+&lt;p>I have started with the temperature sensor in &lt;a href="https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/">this article&lt;/a> and found that amazing. I decided to go try the airquality monitoring.&lt;/p>
+&lt;p>I wanted something cheap, and ideally with bluetooth to connect it easily to my ESP32 and Home assistant, I found that Airbox WP6003 can do the job.&lt;/p>
+&lt;h2 id="requirements">Requirements:&lt;/h2>
+&lt;!-- &lt;div style="width: 100%; margin-bottom: 16px">
+ &lt;a
+ href="https://torifio.com"
+ onclick="gtag('event', 'torifio', {'event_category': 'click','event_label': 'torifio_home'})"
+ target="_blank"
+ style="font-weight: bold"
+ >Torifio.com&lt;/a
+ >
+&lt;/div>
+&lt;p>
+ I have created Torifio to provide fast delivery and cheap products in Europe.
+&lt;/p></description></item><item><title>ESP32 AM312 motion sensor automation</title><link>https://omarghader.github.io/esp32-am312-pir-motion-sensor/</link><pubDate>Sun, 20 Feb 2022 21:57:23 +0200</pubDate><guid>https://omarghader.github.io/esp32-am312-pir-motion-sensor/</guid><description>&lt;p>DIY 5 minutes : Connect esp32 to the motion sensor am312 and create an automation.&lt;/p>
+&lt;p>In the &lt;a href="https://omarghader.github.io/how-to-turn-off-light-automatically/">last article&lt;/a>, we&amp;rsquo;ve seen how to turn on/off the smart light depending on the presence of your smartwatch. In this article, we will see how to turn on/off the light using the PIR motion sensor AM312.&lt;/p>
+&lt;h2 id="requirements">Requirements&lt;/h2>
+&lt;p>Before starting the tutorial, you should have these materials.&lt;/p>
+&lt;!-- &lt;div style="width: 100%; margin-bottom: 16px">
+ &lt;a
+ href="https://torifio.com"
+ onclick="gtag('event', 'torifio', {'event_category': 'click','event_label': 'torifio_home'})"
+ target="_blank"
+ style="font-weight: bold"
+ >Torifio.com&lt;/a
+ >
+&lt;/div>
+&lt;p>
+ I have created Torifio to provide fast delivery and cheap products in Europe.
+&lt;/p></description></item><item><title>DIY 5$: deploy Wordpress + free SSL with letsencrypt and haproxy</title><link>https://omarghader.github.io/wordpress-haproxy-letsencrypt-free-ssl/</link><pubDate>Sun, 04 Apr 2021 22:17:23 +0200</pubDate><guid>https://omarghader.github.io/wordpress-haproxy-letsencrypt-free-ssl/</guid><description>&lt;p>If you are starting your new business or want to have your own blog, hosting your website is something are looking for. But you are asking yourself: &amp;ldquo;What is a cheap and good way to host my website?&amp;rdquo;.&lt;/p>
+&lt;p>Well, I have asked myself the same question and I got the answer. I had already an &lt;a onclick="gtag('event', 'aliexpress', {'event_category': 'click','event_label': 'orangepi'})" href="https://s.click.aliexpress.com/e/_DmzBfXl" target="_blank">Orange pi&lt;/a>, so I have decided to use it and deploy my website on it. It has been working since 5 months without any trouble or disfunction.&lt;/p></description></item><item><title>How to turn off the light automatically when you go out using esp32</title><link>https://omarghader.github.io/how-to-turn-off-light-automatically/</link><pubDate>Sat, 23 Jan 2021 20:57:23 +0200</pubDate><guid>https://omarghader.github.io/how-to-turn-off-light-automatically/</guid><description>&lt;p>Everytime you go out and you forget to turn off the light !&lt;/p>
+&lt;p>Don&amp;rsquo;t worry, you are not alone in this situation. We are all LAZY. In this article, we will make it simple and easy to make some economy on your electric bill, but we will also contribute to save the planet.&lt;/p>
+&lt;h2 id="requirements">Requirements&lt;/h2>
+&lt;p>Before starting the tutorial, you should have these materials.&lt;/p>
+&lt;!-- &lt;div style="width: 100%; margin-bottom: 16px">
+ &lt;a
+ href="https://torifio.com"
+ onclick="gtag('event', 'torifio', {'event_category': 'click','event_label': 'torifio_home'})"
+ target="_blank"
+ style="font-weight: bold"
+ >Torifio.com&lt;/a
+ >
+&lt;/div>
+&lt;p>
+ I have created Torifio to provide fast delivery and cheap products in Europe.
+&lt;/p></description></item><item><title>ESP32 cam tutorial: Setup a 5$ live streaming camera for your house with esphome</title><link>https://omarghader.github.io/esp32-cam-tutorial/</link><pubDate>Sat, 02 Jan 2021 20:57:23 +0200</pubDate><guid>https://omarghader.github.io/esp32-cam-tutorial/</guid><description>&lt;p>Yes you can monitor your house with live streaming for &lt;code>only 5$&lt;/code>.&lt;/p>
+&lt;p>How? In this article, I will show you my test with esp32 camera. In addition, you will see how to configure it using esphome. Finally, I will show you how to connect esp32 cam to home assistant.&lt;/p>
+&lt;h2 id="requirements">Requirements&lt;/h2>
+&lt;p>Before starting the tutorial, you should have these materials.
+&lt;strong>Aliexpress&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>ESP32 cam chip with camera module OV2640. &lt;a onclick="gtag('event', 'aliexpress', {'event_category': 'click','event_label': 'esp32-cam'})" href="https://s.click.aliexpress.com/e/_Alj8bx" target="_blank">Buy the kit from aliexpress&lt;/a>&lt;/li>
+&lt;li>Jump wires&lt;/li>
+&lt;li>FTDI 3.3V/5.5V TTL Module. &lt;a onclick="gtag('event', 'aliexpress', {'event_category': 'click','event_label': 'ftdi'})" href="https://s.click.aliexpress.com/e/_Alj8bx" target="_blank">Buy the kit from aliexpress&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>If you find any problem during this tutorial&lt;/strong>: Please leave a commment and I will reply very soon!&lt;/p></description></item><item><title>HAProxy LetsEncrypt Docker Tutorial: Create and Renew HTTPs Certificates for free</title><link>https://omarghader.github.io/haproxy-letsencrypt-docker-certbot-certificates/</link><pubDate>Thu, 22 Oct 2020 17:57:23 +0200</pubDate><guid>https://omarghader.github.io/haproxy-letsencrypt-docker-certbot-certificates/</guid><description>&lt;p>If you are looking to secure your website/API for free and found yourself on this page, that means you are on the good path :)
+Securing pages are required for security reasons, but also improve your ranking on search engines and can impact your social visibility.&lt;/p>
+&lt;p>This tutorial will show how to secure a golang API using HAProxy and letsencrypt.&lt;/p>
+&lt;h2 id="whats-letsencrypt">What&amp;rsquo;s LetsEncrypt&lt;/h2>
+&lt;p>&lt;a href="https://letsencrypt.org">LetsEncrypt&lt;/a> is a free certificate authority launched on 2016. It automates the delivery of certificates used to secure the traffic. The certificate is valid for 90 days.
+The protocol ACME (Automated Certificate Management Environment) is used by LetsEncrypt to proof that you are the domain owner, to generate the certificate and to renew it.&lt;/p></description></item><item><title>How to connect ESP32 to home assistant in 5 minutes</title><link>https://omarghader.github.io/how-to-connect-esp32-esphome-to-home-assistant/</link><pubDate>Tue, 13 Oct 2020 20:57:23 +0200</pubDate><guid>https://omarghader.github.io/how-to-connect-esp32-esphome-to-home-assistant/</guid><description>&lt;p>How to connect ESP32 configured with ESPhome to home assistant.&lt;/p>
+&lt;p>In the &lt;a href="https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/">last article&lt;/a>, we&amp;rsquo;ve seen how to configure an ESP32 chip with ESPhome and how to connect it to Xiomi Mijia thermometer. Now, we will discover how to have a good graphical interface to monitor the temperature of the room.&lt;/p>
+&lt;h2 id="what-is-home-assistant">What is home assistant?&lt;/h2>
+&lt;p>Home assistant is an open source software that let you monitor IoT devices in your home. Also, it can create automation easily. For example, when the temperature is less than 21 degrees, you can send a notification to your mobile device. Also, you can may run your heater if you have a connected heater.&lt;/p></description></item><item><title>Esphome Tutorial: for 4$ monitor your home temperature with esp32 and xiaomi mijia</title><link>https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/</link><pubDate>Sun, 11 Oct 2020 20:57:23 +0200</pubDate><guid>https://omarghader.github.io/how-to-monitor-your-home-temperature-with-esp32-and-xiaomi-mijia-using-esphome/</guid><description>&lt;p>We live in a world where everything is connected. One day, I wanted to know the temperature of my house when I&amp;rsquo;m outside to check if the heating regulator is working or not. Already having a bluetooth Xiaomi Mijia lywsd03mmc thermometer, I was looking for something cheap and tiny to do connect to the thermometer and do the job.&lt;/p>
+&lt;p>I did some research and found a chip called &lt;code>ESP32&lt;/code>. This chip has integrated bluetooth and WIFI. It is very tiny (3cmx6cm). Also, very easy to program using some known tools like arduino or esphome. Therefore, I decided to give this a try and I bought it for 4$.&lt;/p></description></item><item><title>Align div to the bottom of the page in 3 steps</title><link>https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/</link><pubDate>Fri, 17 Apr 2020 08:57:23 +0200</pubDate><guid>https://omarghader.github.io/align-div-to-the-bottom-of-the-page-in-3-steps/</guid><description>&lt;p>Aligning an element at the bottom of the page is a very common issue in web development and css. You will find the best practices for aligning the div at the bottom of the page.&lt;/p>
+&lt;h2 id="step-1--setting-the-parent-position-to-relative">Step 1 : Setting the parent position to relative.&lt;/h2>
+&lt;p>If you want to align a div at the bottom of a parent div, the parent should have a &lt;code>position : relative&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">parent&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">position&lt;/span>: &lt;span style="color:#66d9ef">relative&lt;/span>; &lt;span style="color:#75715e">/* Set parent position to relative */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">div&lt;/span> &lt;span style="color:#a6e22e">class&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;parent&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">div&lt;/span> &lt;span style="color:#a6e22e">class&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;bottom&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#f92672">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="step-2--setting-the-div-position-to-absolute">Step 2 : Setting the div position to absolute.&lt;/h2>
+&lt;p>The div that we want to align at the bottom should have a &lt;code>position : absolute&lt;/code>.&lt;/p></description></item><item><title>Srcset Tutorial : Responsive Image HTML</title><link>https://omarghader.github.io/srcset-tutorial-responsive-image-html/</link><pubDate>Thu, 16 Apr 2020 08:57:23 +0200</pubDate><guid>https://omarghader.github.io/srcset-tutorial-responsive-image-html/</guid><description>&lt;p>Responsive images are images that adapt to the width of screen to fit it perfectly and to improve the performance of the site.&lt;/p>
+&lt;p>If you like this post feel free to share it with your colleagues.&lt;/p>
+&lt;h2 id="why-reponsive-images">Why reponsive images?&lt;/h2>
+&lt;p>I&amp;rsquo;m pretty sure that, until now, all the images you have inserted in your websites looks like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">img&lt;/span> &lt;span style="color:#a6e22e">src&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;imageURL&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">width&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;360px&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">height&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;auto&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">max-width&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;100vw&amp;#34;&lt;/span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Let&amp;rsquo;s say the image has &lt;code>1024px width : 768px height&lt;/code>.&lt;/p>
+&lt;p>By loading this image on a mobile with &lt;code>360px width x 740px height&lt;/code> dimension, you are trying to fit an image of 1024x768 into 360x270 of width. (if we want to resize 1024 =&amp;gt; 360, then heightResponsive Image = 768*360/1024)&lt;/p></description></item><item><title>How to create a sliding menu bar</title><link>https://omarghader.github.io/how-to-create-a-sliding-menu-bar/</link><pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/how-to-create-a-sliding-menu-bar/</guid><description>&lt;p>In this tutorial, I will show you how to create a sliding left panel easily using css and javascript only.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">div&lt;/span> &lt;span style="color:#a6e22e">class&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;container&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">div&lt;/span> &lt;span style="color:#a6e22e">class&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;slider open&amp;#34;&lt;/span>&amp;gt;Left Panel&amp;lt;/&lt;span style="color:#f92672">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">button&lt;/span> &lt;span style="color:#a6e22e">class&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;toggle-button&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">onclick&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;toggleSlider()&amp;#34;&lt;/span>&amp;gt;&amp;lt; &lt;span style="color:#f92672">Close&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">&amp;lt;/&lt;/span>&lt;span style="color:#a6e22e">button&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">script&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">function&lt;/span> &lt;span style="color:#a6e22e">toggleSlider&lt;/span> () {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">slider&lt;/span> &lt;span style="color:#f92672">=&lt;/span> document.&lt;span style="color:#a6e22e">querySelector&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;.slider&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">buttonSlider&lt;/span> &lt;span style="color:#f92672">=&lt;/span> document.&lt;span style="color:#a6e22e">querySelector&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;.toggle-button&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#f92672">!&lt;/span>&lt;span style="color:#a6e22e">slider&lt;/span>.&lt;span style="color:#a6e22e">classList&lt;/span>.&lt;span style="color:#a6e22e">contains&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;open&amp;#39;&lt;/span>)){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">slider&lt;/span>.&lt;span style="color:#a6e22e">classList&lt;/span>.&lt;span style="color:#a6e22e">add&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;open&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">buttonSlider&lt;/span>.&lt;span style="color:#a6e22e">innerHTML&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#39;&amp;lt; Close&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#66d9ef">else&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">slider&lt;/span>.&lt;span style="color:#a6e22e">classList&lt;/span>.&lt;span style="color:#a6e22e">remove&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;open&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">buttonSlider&lt;/span>.&lt;span style="color:#a6e22e">innerHTML&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#39;&amp;gt; Open&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">script&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>.&lt;span style="color:#a6e22e">container&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">position&lt;/span>: &lt;span style="color:#66d9ef">relative&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">width&lt;/span>: &lt;span style="color:#ae81ff">400&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">height&lt;/span>: &lt;span style="color:#ae81ff">400&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">background&lt;/span>: &lt;span style="color:#ae81ff">#145677&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>.&lt;span style="color:#a6e22e">slider&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">width&lt;/span>: &lt;span style="color:#ae81ff">200&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">height&lt;/span>: &lt;span style="color:#ae81ff">400&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">background&lt;/span>: &lt;span style="color:#ae81ff">#945677&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">position&lt;/span>: &lt;span style="color:#66d9ef">absolute&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">transition&lt;/span>: &lt;span style="color:#66d9ef">transform&lt;/span> &lt;span style="color:#ae81ff">0.3&lt;/span>&lt;span style="color:#66d9ef">s&lt;/span> &lt;span style="color:#66d9ef">ease&lt;/span>, &lt;span style="color:#66d9ef">opacity&lt;/span> &lt;span style="color:#ae81ff">0.3&lt;/span>&lt;span style="color:#66d9ef">s&lt;/span> &lt;span style="color:#66d9ef">ease&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">transform&lt;/span>: translate3d(&lt;span style="color:#ae81ff">-200&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span> ,&lt;span style="color:#ae81ff">0&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">will-change&lt;/span>: &lt;span style="color:#66d9ef">transform&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">opacity&lt;/span>:&lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>.&lt;span style="color:#a6e22e">open&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">transform&lt;/span>: translate3d(&lt;span style="color:#ae81ff">0&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span> ,&lt;span style="color:#ae81ff">0&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">opacity&lt;/span>: &lt;span style="color:#ae81ff">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>.&lt;span style="color:#a6e22e">toggle-button&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">opacity&lt;/span>:&lt;span style="color:#ae81ff">1&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">transform&lt;/span>: translate3d(&lt;span style="color:#ae81ff">250&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>, &lt;span style="color:#ae81ff">100&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;style>
+.container{
+ position: relative;
+ width: 400px;
+ height: 400px;
+ background: #145677;
+}
+
+.slider{
+ width: 200px;
+ height: 400px;
+ background: #945677;
+ position: absolute;
+ transition: transform 0.3s ease, opacity 0.3s ease;
+ transform: translate3d(-200px, 0 ,0);
+ will-change: transform;
+ opacity:0;
+}
+
+.open{
+ transform: translate3d(0, 0 ,0);
+ opacity: 1;
+}
+.toggle-button{
+ opacity:1;
+ transform: translate3d(250px, 100px, 0);
+}
+
+&lt;/style>
+&lt;div class="container">
+ &lt;div class="slider open">Left Panel&lt;/div>
+ &lt;button class="toggle-button" onclick="toggleSlider()">&lt; Close&lt;/button>
+&lt;/div>
+&lt;script>
+ function toggleSlider () {
+ var slider = document.querySelector('.slider')
+ var buttonSlider = document.querySelector('.toggle-button')
+ if (!slider.classList.contains('open')){
+ slider.classList.add('open')
+ buttonSlider.innerHTML = '&lt; Close'
+ } else {
+ slider.classList.remove('open')
+ buttonSlider.innerHTML = '> Open'
+ }
+ }
+&lt;/script>
+&lt;h4 id="sources">Sources&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://www.kirupa.com/html5/creating_a_smooth_sliding_menu.htm">https://www.kirupa.com/html5/creating_a_smooth_sliding_menu.htm&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.w3schools.com/howto/howto_js_sidenav.asp">https://www.w3schools.com/howto/howto_js_sidenav.asp&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://freefrontend.com/css-sliding-menus/">https://freefrontend.com/css-sliding-menus/&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>How to center a element inside div with css</title><link>https://omarghader.github.io/how-to-center-a-element-inside-div-with-css/</link><pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/how-to-center-a-element-inside-div-with-css/</guid><description>&lt;p>Centering elements inside div is a common problem in web development. In this post I will explain a very easy solution for this that works always.&lt;/p>
+&lt;h2 id="before-centering">Before centering&lt;/h2>
+&lt;p>Let&amp;rsquo;s say we have those 2 containers.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">div&lt;/span> &lt;span style="color:#a6e22e">class&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;container&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">div&lt;/span> &lt;span style="color:#a6e22e">class&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;center-element&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#f92672">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">container&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">width&lt;/span>: &lt;span style="color:#ae81ff">300&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">height&lt;/span>: &lt;span style="color:#ae81ff">300&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">background&lt;/span>: &lt;span style="color:#66d9ef">red&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">center-element&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">width&lt;/span>: &lt;span style="color:#ae81ff">200&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">height&lt;/span>: &lt;span style="color:#ae81ff">200&lt;/span>&lt;span style="color:#66d9ef">px&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">background&lt;/span>: &lt;span style="color:#66d9ef">yellow&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div>
+&lt;div style="width: 300px;height: 300px;background: red;">
+ &lt;div style="width: 200px;height: 200px;background: yellow;">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="centering-the-element">Centering the element&lt;/h2>
+&lt;p>The easiest way is to use the &lt;code>flex&lt;/code> display that handles the centering in very good way.&lt;/p></description></item><item><title>Docker Compose Nginx Tutorial</title><link>https://omarghader.github.io/docker-compose-nginx-tutorial/</link><pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/docker-compose-nginx-tutorial/</guid><description>&lt;h2 id="1-what-is-nginx">1. What is nginx?&lt;/h2>
+&lt;p>Nginx is a reverse proxy, HTTP cache and load balancer. It aims to enhance performance by using less memory. Nginx is event-driven. That measns it uses one thread to receive requests, then it dispatch it to one or multiple threads asynchronously.&lt;/p>
+&lt;p>In this post, you will learn how to deploy a load balancer using nginx in docker.&lt;/p>
+&lt;h2 id="2-requirements">2. Requirements&lt;/h2>
+&lt;ul>
+&lt;li>Docker&lt;/li>
+&lt;li>Docker compose&lt;/li>
+&lt;/ul>
+&lt;p>For this tutorial, you need a linux machine. I am using an &lt;a onclick="gtag('event', 'aliexpress', {'event_category': 'click','event_label': 'orangepi'})" href="https://s.click.aliexpress.com/e/_DmzBfXl" target="_blank">Orange pi &lt;/a> server because it is very performant and affordable.&lt;/p></description></item><item><title>Monitor your applications easily with Grafana and Prometheus</title><link>https://omarghader.github.io/monitor-your-applications-easily-with-grafana-and-prometheus/</link><pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/monitor-your-applications-easily-with-grafana-and-prometheus/</guid><description>&lt;h2 id="1-what-is-prometheus--grafana">1. What is Prometheus &amp;amp; Grafana?&lt;/h2>
+&lt;ul>
+&lt;li>Prometheus is a monitoring system which collects metrics from applications easily.&lt;/li>
+&lt;li>Grafana is a user-friendly visualization project which transforms the metrics collected before into amazing charts.&lt;/li>
+&lt;/ul>
+&lt;p>In this article, you will learn how to connect prometheus to grafana using a docker compose file.&lt;/p>
+&lt;h2 id="2-requirements">2. Requirements&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://omarghader.github.io/introduction-to-docker/">Install docker&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://omarghader.github.io/docker-compose-tutorial/">Install docker compose&lt;/a>&lt;/li>
+&lt;li>Golang &amp;gt;= 1.08&lt;/li>
+&lt;/ul>
+&lt;h2 id="3-create-your-application">3. Create your application&lt;/h2>
+&lt;p>If you want to get metrics from your application, the first step is to add prometheus to your application code. In this tutorial, we will use the example written on &lt;a href="https://prometheus.io/docs/guides/go-application/">prometheus docs&lt;/a>.&lt;/p></description></item><item><title>Configuring Node js on Jenkins using docker</title><link>https://omarghader.github.io/jenkins-nodejs-configuration/</link><pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/jenkins-nodejs-configuration/</guid><description>&lt;p>Jenkins is a devops tool for continuous intergration.&lt;/p>
+&lt;h2 id="install-jenkins">Install jenkins&lt;/h2>
+&lt;p>Requirements for this tutorial :&lt;/p>
+&lt;ul>
+&lt;li>Docker&lt;/li>
+&lt;li>Docker compose&lt;/li>
+&lt;/ul>
+&lt;p>We will user docker compose to configure jenkins docker container:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">version&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;3.5&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">services&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">jenkins&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">image&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;jenkins/jenkins:lts&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">container_name&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;jenkins&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">restart&lt;/span>: &lt;span style="color:#ae81ff">always&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">ports&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#e6db74">&amp;#39;8080:8080&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#e6db74">&amp;#39;50000:50000&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">volumes&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">jenkins-data:/etc/gitlab&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">/var/run/docker.sock:/var/run/docker.sock&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">volumes&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">jenkins-data&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">jenkins-data&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then, run the command :&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ docker-compose up -d
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="run-jenkins">Run Jenkins&lt;/h2>
+&lt;p>Once you had run the docker compose file, test that your jenkins is running by opening this url on your browser &lt;a href="http://localhost:8080">http://localhost:8080&lt;/a>&lt;/p></description></item><item><title>Docker Compose Tutorial</title><link>https://omarghader.github.io/docker-compose-tutorial/</link><pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/docker-compose-tutorial/</guid><description>&lt;p>If you are tired of configuring your docker containers every time you want to run it, docker compose is the solution. Docker compose is a tool that will read a configuration file, and will translate it to docker command easily.&lt;/p>
+&lt;blockquote>
+&lt;p>If you like this article, leave a comment and share it with your friends :)&lt;/p>&lt;/blockquote>
+&lt;h2 id="requirement">Requirement&lt;/h2>
+&lt;p>For this tutorial, you need a linux machine. I am using an &lt;a onclick="gtag('event', 'aliexpress', {'event_category': 'click','event_label': 'orangepi'})" href="https://s.click.aliexpress.com/e/_DmzBfXl" target="_blank">Orange pi &lt;/a> server because it is very performant and affordable.&lt;/p></description></item><item><title>Call R From Java Using JRI Library</title><link>https://omarghader.github.io/call-r-from-java-using-jri-library/</link><pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/call-r-from-java-using-jri-library/</guid><description>&lt;p>R is a very powerful language designed for mathematics and statistics. It became one of the best data analysis tools due to its performance and its syntax simplicity. R can import datasets or generate a csv file with 1 line of code.&lt;/p>
+&lt;p>So, It will be very important to use R with one of the most known programming languages : JAVA. Using JRI library, i will show you how to assign variables, run R scripts&amp;hellip;. in Java.&lt;/p></description></item><item><title>Docker Tutorial : PhpMyAdmin and MySQL Server</title><link>https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/</link><pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/docker-tutorial-phpmyadmin-and-mysql-server/</guid><description>&lt;p>If you are new to Docker or you are wondering why docker is very popular today, I recommend you to read my previous posts &lt;a href="https://omarghader.github.io/introduction-to-docker/">Introduction to Docker&lt;/a>.&lt;/p>
+&lt;h2 id="requirement">Requirement&lt;/h2>
+&lt;p>For this tutorial, you need a linux machine. I am using an &lt;a onclick="gtag('event', 'aliexpress', {'event_category': 'click','event_label': 'orangepi'})" href="https://s.click.aliexpress.com/e/_DmzBfXl" target="_blank">Orange pi &lt;/a> server because it is very performant and affordable.&lt;/p>
+&lt;p>Buy it from Aliexpress: &lt;a onclick="gtag('event', 'aliexpress', {'event_category': 'click','event_label': 'orangepi'})" href="https://s.click.aliexpress.com/e/_DmzBfXl" target="_blank">Orange pi &lt;/a>&lt;/p>
+&lt;h2 id="pull-containers-from-docker-registry">Pull Containers from Docker registry&lt;/h2>
+&lt;h4 id="searching-for-containers">Searching for containers&lt;/h4>
+&lt;p>Docker have a public registry where you could find images of dockerized application that are ready to use. All information and indications for using container are specified too.&lt;/p></description></item><item><title>Introduction to Docker</title><link>https://omarghader.github.io/introduction-to-docker/</link><pubDate>Sun, 23 Aug 2015 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/introduction-to-docker/</guid><description>&lt;p>Docker is a new open-source project that makes deployment of applications easier. The idea of this technology is very simple : &amp;ldquo;the application runs inside a software container. This container is acting like a mini Operating System&amp;rdquo;. Basics are very similar to Virtual machine : An OS is running independently of host&amp;rsquo;s OS. Networking is working using bridges&amp;hellip;
+Docker is using 2 terms : image and container:&lt;/p>
+&lt;ul>
+&lt;li>An image is a packaged application that is not running.&lt;/li>
+&lt;li>A container is an instance of image. It can be a running or stopped application.&lt;/li>
+&lt;/ul>
+&lt;p>In addition, Docker have a lot of advantages. let&amp;rsquo;s discover them!&lt;/p></description></item><item><title>My First Post</title><link>https://omarghader.github.io/my-first-post/</link><pubDate>Sat, 22 Aug 2015 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/my-first-post/</guid><description>&lt;p>Hi, This is my first post.
+I&amp;rsquo;m computer and communication engineering student at INSA Toulouse.
+I&amp;rsquo;m interested in programming in : Java , C , Go lang and Javascript&amp;hellip;
+Also, I&amp;rsquo;m interested in Android development , Web apps, and Security DevOps, and Linux Administration.
+I would like to use this blog to share information about computer science.&lt;/p>
+&lt;h2 id="android-development">Android development&lt;/h2>
+&lt;p>My Future posts will be related to these subjects.
+My tutorials will be focused on simplifying and coding android applications efficiently.
+In addition to some tips and tricks to simplify tasks.
+Some libraries will be introduced and used like volley&amp;hellip;&lt;/p></description></item><item><title>Omar Ghader (Marc)</title><link>https://omarghader.github.io/about/</link><pubDate>Fri, 08 Aug 2014 20:53:07 -0400</pubDate><guid>https://omarghader.github.io/about/</guid><description>&lt;h2 id="-about-me">👋 About Me&lt;/h2>
+&lt;p>I&amp;rsquo;m a &lt;strong>Senior Software Engineer&lt;/strong> with over 9 years of experience designing scalable systems, driving DevOps practices, and building robust Observability platforms.&lt;/p>
+&lt;p>Currently, I work at &lt;strong>Observability Team at Postfinance&lt;/strong>, where I design and develop high-throughput metric pipelines handling over &lt;strong>2GB/s&lt;/strong>, manage CI/CD and infrastructure-as-code workflows and build tools to improve the visibility over the infrastructure.&lt;/p>
+&lt;p>Contact me: &lt;a href="https://www.linkedin.com/in/marc-ghader" target="_blank">Linkedin&lt;/a>&lt;/p>
+&lt;h2 id="-what-i-do-best">🔧 What I Do Best&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Monitoring Solutions&lt;/strong> – Improving the Observability for the infrastructure and Incident management&lt;/li>
+&lt;li>&lt;strong>Software Engineering&lt;/strong> – Architecting and building resilient backend applications&lt;/li>
+&lt;li>&lt;strong>DevOps &amp;amp; Cloud&lt;/strong> – Automating deployments with &lt;strong>AWS&lt;/strong>, &lt;strong>Docker&lt;/strong>, &lt;strong>Kubernetes&lt;/strong>, and microservices&lt;/li>
+&lt;li>&lt;strong>Smart Home Projects&lt;/strong> – DIY enthusiast building affordable, functional smart home setups&lt;/li>
+&lt;/ul>
+&lt;h2 id="experiences">Experiences&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: center">&lt;strong>Time&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>Company&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>Role&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: center">March 2023 - Present&lt;/td>
+ &lt;td style="text-align: center">Postfinance&lt;/td>
+ &lt;td style="text-align: center">Senior Software Engineer- Observability/Monitoring&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">Oct 2020 - Feb 2023&lt;/td>
+ &lt;td style="text-align: center">Ubisoft&lt;/td>
+ &lt;td style="text-align: center">Lead Software Engineer: Go cloud developer, Iaas and Ops, monitoring - Performance enhance&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">Sept 2016 - Sep 2020&lt;/td>
+ &lt;td style="text-align: center">Airbus&lt;/td>
+ &lt;td style="text-align: center">Backend cloud developer : Java Spring boot, AWS. Frontend : Vue &lt;br>Full stack developer Java backend + ReactJS frontend&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">Jun 2015- Sep 2016&lt;/td>
+ &lt;td style="text-align: center">Sogeti Security&lt;/td>
+ &lt;td style="text-align: center">Go Secruity devOps + AngularJs frontend&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="certificates">Certificates&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>AWS developer associate certificate&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>CKAD : Certified Kubernetes Application Developer&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="education">Education&lt;/h2>
+&lt;ul>
+&lt;li>MBA at INSA Toulouse&lt;/li>
+&lt;li>Master of Software and Network Engineering at INSA Toulouse.&lt;/li>
+&lt;li>Google mobile web specialist scholarship laureate&lt;/li>
+&lt;/ul>
+&lt;h3 id="achievements-">Achievements :&lt;/h3>
+&lt;ul>
+&lt;li>1.6k viewers to my blog/month&lt;/li>
+&lt;li>My &lt;a href="https://www.youtube.com/channel/UCrBkxDt5fRLErQwhefINuaA">youtube channel&lt;/a>&lt;/li>
+&lt;li>Android applications : 45000 downloads (in 6 months)&lt;/li>
+&lt;/ul>
+&lt;h3 id="backend-">Backend :&lt;/h3>
+&lt;ul>
+&lt;li>Languages: Go, Java ,C, python, NodeJs&lt;/li>
+&lt;li>MessageQueue : RabbitMq, kafka&lt;/li>
+&lt;li>Relational Database : MongoDB, MySql, PostgreSql&lt;/li>
+&lt;li>Graph Database : Neo4j, Arangodb&lt;/li>
+&lt;/ul>
+&lt;h3 id="devops-">DevOps :&lt;/h3>
+&lt;ul>
+&lt;li>provisioning : Ansible, Salt Stack, Puppet&lt;/li>
+&lt;li>virtualization : Vagrant , Docker&lt;/li>
+&lt;li>Scalability : HaProxy , nginx, confd, Creation of Micro-Services&lt;/li>
+&lt;li>Discovery : etcd&lt;/li>
+&lt;li>Orchestration : Kubernetes, docker swarm&lt;/li>
+&lt;/ul>
+&lt;h3 id="frontend-">Frontend :&lt;/h3>
+&lt;ul>
+&lt;li>HTML5 ,JS, CSS&lt;/li>
+&lt;li>Mobile : Vue, Ionic, Angularjs, ReactJs, Native (java)&lt;/li>
+&lt;li>Framework : Bootstrap, Material Design&lt;/li>
+&lt;li>UI / UX&lt;/li>
+&lt;/ul>
+&lt;h3 id="data-science-and-big-data-">Data Science and Big Data :&lt;/h3>
+&lt;ul>
+&lt;li>Machine Learning : R, H2o&lt;/li>
+&lt;li>Data&amp;rsquo;s Features Extraction&lt;/li>
+&lt;li>Data cleaning&lt;/li>
+&lt;li>Behavior Detection ( Prediction )&lt;/li>
+&lt;/ul></description></item></channel></rss>

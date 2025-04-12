@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker Compose Nginx Config on</title><link>https://omarghader.github.io/tags/docker-compose-nginx-config/</link><description>Recent content in Docker Compose Nginx Config on</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://omarghader.github.io/tags/docker-compose-nginx-config/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker Compose Nginx Tutorial</title><link>https://omarghader.github.io/docker-compose-nginx-tutorial/</link><pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/docker-compose-nginx-tutorial/</guid><description>&lt;h2 id="1-what-is-nginx">1. What is nginx?&lt;/h2>
+&lt;p>Nginx is a reverse proxy, HTTP cache and load balancer. It aims to enhance performance by using less memory. Nginx is event-driven. That measns it uses one thread to receive requests, then it dispatch it to one or multiple threads asynchronously.&lt;/p>
+&lt;p>In this post, you will learn how to deploy a load balancer using nginx in docker.&lt;/p>
+&lt;h2 id="2-requirements">2. Requirements&lt;/h2>
+&lt;ul>
+&lt;li>Docker&lt;/li>
+&lt;li>Docker compose&lt;/li>
+&lt;/ul>
+&lt;p>For this tutorial, you need a linux machine. I am using an &lt;a onclick="gtag('event', 'aliexpress', {'event_category': 'click','event_label': 'orangepi'})" href="https://s.click.aliexpress.com/e/_DmzBfXl" target="_blank">Orange pi &lt;/a> server because it is very performant and affordable.&lt;/p></description></item></channel></rss>

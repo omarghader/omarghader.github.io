@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Marc Ghader on</title><link>https://omarghader.github.io/tags/marc-ghader/</link><description>Recent content in Marc Ghader on</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Fri, 08 Aug 2014 20:53:07 -0400</lastBuildDate><atom:link href="https://omarghader.github.io/tags/marc-ghader/index.xml" rel="self" type="application/rss+xml"/><item><title>Omar Ghader (Marc)</title><link>https://omarghader.github.io/about/</link><pubDate>Fri, 08 Aug 2014 20:53:07 -0400</pubDate><guid>https://omarghader.github.io/about/</guid><description>&lt;h2 id="-about-me">👋 About Me&lt;/h2>
+&lt;p>I&amp;rsquo;m a &lt;strong>Senior Software Engineer&lt;/strong> with over 9 years of experience designing scalable systems, driving DevOps practices, and building robust Observability platforms.&lt;/p>
+&lt;p>Currently, I work at &lt;strong>Observability Team at Postfinance&lt;/strong>, where I design and develop high-throughput metric pipelines handling over &lt;strong>2GB/s&lt;/strong>, manage CI/CD and infrastructure-as-code workflows and build tools to improve the visibility over the infrastructure.&lt;/p>
+&lt;p>Contact me: &lt;a href="https://www.linkedin.com/in/marc-ghader" target="_blank">Linkedin&lt;/a>&lt;/p>
+&lt;h2 id="-what-i-do-best">🔧 What I Do Best&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Monitoring Solutions&lt;/strong> – Improving the Observability for the infrastructure and Incident management&lt;/li>
+&lt;li>&lt;strong>Software Engineering&lt;/strong> – Architecting and building resilient backend applications&lt;/li>
+&lt;li>&lt;strong>DevOps &amp;amp; Cloud&lt;/strong> – Automating deployments with &lt;strong>AWS&lt;/strong>, &lt;strong>Docker&lt;/strong>, &lt;strong>Kubernetes&lt;/strong>, and microservices&lt;/li>
+&lt;li>&lt;strong>Smart Home Projects&lt;/strong> – DIY enthusiast building affordable, functional smart home setups&lt;/li>
+&lt;/ul>
+&lt;h2 id="experiences">Experiences&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: center">&lt;strong>Time&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>Company&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>Role&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: center">March 2023 - Present&lt;/td>
+ &lt;td style="text-align: center">Postfinance&lt;/td>
+ &lt;td style="text-align: center">Senior Software Engineer- Observability/Monitoring&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">Oct 2020 - Feb 2023&lt;/td>
+ &lt;td style="text-align: center">Ubisoft&lt;/td>
+ &lt;td style="text-align: center">Lead Software Engineer: Go cloud developer, Iaas and Ops, monitoring - Performance enhance&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">Sept 2016 - Sep 2020&lt;/td>
+ &lt;td style="text-align: center">Airbus&lt;/td>
+ &lt;td style="text-align: center">Backend cloud developer : Java Spring boot, AWS. Frontend : Vue &lt;br>Full stack developer Java backend + ReactJS frontend&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">Jun 2015- Sep 2016&lt;/td>
+ &lt;td style="text-align: center">Sogeti Security&lt;/td>
+ &lt;td style="text-align: center">Go Secruity devOps + AngularJs frontend&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="certificates">Certificates&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>AWS developer associate certificate&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>CKAD : Certified Kubernetes Application Developer&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="education">Education&lt;/h2>
+&lt;ul>
+&lt;li>MBA at INSA Toulouse&lt;/li>
+&lt;li>Master of Software and Network Engineering at INSA Toulouse.&lt;/li>
+&lt;li>Google mobile web specialist scholarship laureate&lt;/li>
+&lt;/ul>
+&lt;h3 id="achievements-">Achievements :&lt;/h3>
+&lt;ul>
+&lt;li>1.6k viewers to my blog/month&lt;/li>
+&lt;li>My &lt;a href="https://www.youtube.com/channel/UCrBkxDt5fRLErQwhefINuaA">youtube channel&lt;/a>&lt;/li>
+&lt;li>Android applications : 45000 downloads (in 6 months)&lt;/li>
+&lt;/ul>
+&lt;h3 id="backend-">Backend :&lt;/h3>
+&lt;ul>
+&lt;li>Languages: Go, Java ,C, python, NodeJs&lt;/li>
+&lt;li>MessageQueue : RabbitMq, kafka&lt;/li>
+&lt;li>Relational Database : MongoDB, MySql, PostgreSql&lt;/li>
+&lt;li>Graph Database : Neo4j, Arangodb&lt;/li>
+&lt;/ul>
+&lt;h3 id="devops-">DevOps :&lt;/h3>
+&lt;ul>
+&lt;li>provisioning : Ansible, Salt Stack, Puppet&lt;/li>
+&lt;li>virtualization : Vagrant , Docker&lt;/li>
+&lt;li>Scalability : HaProxy , nginx, confd, Creation of Micro-Services&lt;/li>
+&lt;li>Discovery : etcd&lt;/li>
+&lt;li>Orchestration : Kubernetes, docker swarm&lt;/li>
+&lt;/ul>
+&lt;h3 id="frontend-">Frontend :&lt;/h3>
+&lt;ul>
+&lt;li>HTML5 ,JS, CSS&lt;/li>
+&lt;li>Mobile : Vue, Ionic, Angularjs, ReactJs, Native (java)&lt;/li>
+&lt;li>Framework : Bootstrap, Material Design&lt;/li>
+&lt;li>UI / UX&lt;/li>
+&lt;/ul>
+&lt;h3 id="data-science-and-big-data-">Data Science and Big Data :&lt;/h3>
+&lt;ul>
+&lt;li>Machine Learning : R, H2o&lt;/li>
+&lt;li>Data&amp;rsquo;s Features Extraction&lt;/li>
+&lt;li>Data cleaning&lt;/li>
+&lt;li>Behavior Detection ( Prediction )&lt;/li>
+&lt;/ul></description></item></channel></rss>
