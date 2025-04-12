@@ -1,29 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jenkins on</title><link>https://omarghader.github.io/tags/jenkins/</link><description>Recent content in Jenkins on</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Wed, 22 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://omarghader.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml"/><item><title>Configuring Node js on Jenkins using docker</title><link>https://omarghader.github.io/jenkins-nodejs-configuration/</link><pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/jenkins-nodejs-configuration/</guid><description>&lt;p>Jenkins is a devops tool for continuous intergration.&lt;/p>
-&lt;h2 id="install-jenkins">Install jenkins&lt;/h2>
-&lt;p>Requirements for this tutorial :&lt;/p>
-&lt;ul>
-&lt;li>Docker&lt;/li>
-&lt;li>Docker compose&lt;/li>
-&lt;/ul>
-&lt;p>We will user docker compose to configure jenkins docker container:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">version&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;3.5&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">services&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">jenkins&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">image&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;jenkins/jenkins:lts&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">container_name&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;jenkins&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">restart&lt;/span>: &lt;span style="color:#ae81ff">always&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">ports&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#e6db74">&amp;#39;8080:8080&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#e6db74">&amp;#39;50000:50000&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">volumes&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">jenkins-data:/etc/gitlab&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">/var/run/docker.sock:/var/run/docker.sock&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">volumes&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">jenkins-data&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">jenkins-data&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then, run the command :&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ docker-compose up -d
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="run-jenkins">Run Jenkins&lt;/h2>
-&lt;p>Once you had run the docker compose file, test that your jenkins is running by opening this url on your browser &lt;a href="http://localhost:8080">http://localhost:8080&lt;/a>&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>jenkins on</title><link>https://omarghader.github.io/tags/jenkins/</link><description>Recent content in jenkins on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Wed, 22 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://omarghader.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml"/><item><title>Configuring Node js on Jenkins using docker</title><link>https://omarghader.github.io/jenkins-nodejs-configuration/</link><pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate><guid>https://omarghader.github.io/jenkins-nodejs-configuration/</guid><description>Jenkins is a devops tool for continuous intergration.
+Install jenkins Requirements for this tutorial :
+Docker Docker compose We will user docker compose to configure jenkins docker container:
+version: &amp;#39;3.5&amp;#39; services: jenkins: image: &amp;#39;jenkins/jenkins:lts&amp;#39; container_name: &amp;#39;jenkins&amp;#39; restart: always ports: - &amp;#39;8080:8080&amp;#39; - &amp;#39;50000:50000&amp;#39; volumes: - jenkins-data:/etc/gitlab - /var/run/docker.sock:/var/run/docker.sock volumes: jenkins-data: name: jenkins-data Then, run the command :
+$ docker-compose up -d Run Jenkins Once you had run the docker compose file, test that your jenkins is running by opening this url on your browser http://localhost:8080</description></item></channel></rss>
