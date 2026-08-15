@@ -1,0 +1,29 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <!-- monitoring pulse / uptime line -->
+  <path d="M8 36
+           L20 36
+           L25 22
+           L30 46
+           L35 30
+           L39 36
+           L56 36"
+        fill="none"
+        stroke="#34d399"
+        stroke-width="4.2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- status dot at end of line, glowing "online" indicator -->
+  <circle cx="56" cy="36" r="4.6" fill="#34d399"/>
+  <circle cx="56" cy="36" r="4.6" fill="none" stroke="#0f172a" stroke-width="1.4"/>
+</svg>
